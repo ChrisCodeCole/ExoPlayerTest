@@ -1,0 +1,3165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Option>
+ <Fragment>
+  <FragmentTitle>Framework / Decoding / Rendering</FragmentTitle>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Engine/Render/Decoder</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>0</OptionId>
+    <!-- PREFERENCE_KEY_ENGINETYPE -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>3</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Engine Type</Title>
+    <Description>Select the engine type</Description>
+    <UIType>2</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList>
+     <item>
+      <ItemTitle>VOME2</ItemTitle>
+      <Value>0X00000000</Value>
+      <Platform>7</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+     <item>
+      <ItemTitle>AVPlayer</ItemTitle>
+      <Value>0X00000002</Value>
+      <Platform>2</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+                    <item>
+                        <ItemTitle>Auto</ItemTitle>
+                        <Value>0X00001000</Value>
+                        <Platform>2</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    </item>
+                </ValueList>
+    <Selected>0</Selected>
+    <DefaultValue>0</DefaultValue>
+   </Optionitem>
+   <Optionitem>
+    <OptionId>1</OptionId>
+    <!-- PREFERENCE_KEY_RENDERTYPE -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>1</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Video Render Type</Title>
+    <Description>Select the video render type</Description>
+    <UIType>2</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList>
+     <item>
+      <ItemTitle>Canvas Data</ItemTitle>
+      <Value>0</Value>
+      <Platform>0</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+     <item>
+      <ItemTitle>Native Window</ItemTitle>
+      <Value>1</Value>
+      <Platform>1</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+     <item>
+      <ItemTitle>Native C</ItemTitle>
+      <Value>4</Value>
+      <Platform>1</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+     <item>
+      <ItemTitle>OpenGL</ItemTitle>
+      <Value>3</Value>
+      <Platform>1</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+    </ValueList>
+    <Selected>1</Selected>
+    <DefaultValue>1</DefaultValue>
+   </Optionitem>
+   <Optionitem>
+    <OptionId>61</OptionId>
+    <!-- PREFERENCE_KEY_VIEWTYPE -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>1</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Video View Type</Title>
+    <Description>Select the video view type</Description>
+    <UIType>2</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList>
+     <item>
+      <ItemTitle>voSurfaceView</ItemTitle>
+      <Value>0</Value>
+      <Platform>1</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+     <item>
+      <ItemTitle>TextureView</ItemTitle>
+      <Value>1</Value>
+      <Platform>1</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+    </ValueList>
+    <Selected>0</Selected>
+    <DefaultValue>0</DefaultValue>
+   </Optionitem>
+   <Optionitem>
+    <OptionId>2</OptionId>
+    <!-- PREFERENCE_KEY_AUDIODECODERTYPE -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>1</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Audio Decoder Type</Title>
+    <Description>Select the audio decoder type</Description>
+    <UIType>2</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList>
+     <item>
+      <ItemTitle>Software</ItemTitle>
+      <Value>1048576</Value>
+      <Platform>1</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+     <item>
+      <ItemTitle>IOMX</ItemTitle>
+      <Value>4194304</Value>
+      <Platform>1</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+     <item>
+      <ItemTitle>MediaCodec</ItemTitle>
+      <Value>2097152</Value>
+      <Platform>1</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+    </ValueList>
+    <Selected>0</Selected>
+    <DefaultValue>1048576</DefaultValue>
+   </Optionitem>
+   <Optionitem>
+    <OptionId>3</OptionId>
+    <!-- PREFERENCE_KEY_VIDEODECODERTYPE -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>3</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Video Decoder Type</Title>
+    <Description>Select the video decoder type</Description>
+    <UIType>2</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList>
+     <item>
+      <ItemTitle>Software</ItemTitle>
+      <Value>0X00000001</Value>
+      <Platform>3</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+     <item>
+      <ItemTitle>IOMX</ItemTitle>
+      <Value>0X00000002</Value>
+      <Platform>1</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+     <item>
+      <ItemTitle>MediaCodec</ItemTitle>
+      <Value>0X00000004</Value>
+      <Platform>1</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+     <item>
+      <ItemTitle>AutoHW</ItemTitle>
+      <Value>0X00000100</Value>
+      <Platform>3</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+    </ValueList>
+    <Selected>0</Selected>
+    <DefaultValue>0X00000001</DefaultValue>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>HW Decoder Max Resolution</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>48</OptionId>
+    <!-- OPTION_ENABLE_HW_DECODER_MAX_RESOLUTION -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>1</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Enable HW Decoder Max Resolution</Title>
+    <Description>Set hw decoder max resolution</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <Optionitem>
+     <OptionId>4801</OptionId>
+     <!-- OPTION_HW_DECODER_MAX_WIDTH -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>1</Platform>
+     <!--OR operation. 1:Android; 2:iOS 4:Plugin-->
+     <Title>HW Decoder Max Width</Title>
+     <Description>Set hw decoder max width</Description>
+     <UIType>3</UIType>
+     <!--1:Check box; 2:Radio button; 3:Edit box 4:Button-->
+     <ValueList>
+      <item>
+       <ItemTitle>Set hw decoder max width</ItemTitle>
+       <Value>8192</Value>
+       <Platform>1</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+    <Optionitem>
+     <OptionId>4802</OptionId>
+     <!-- OPTION_HW_DECODER_MAX_HEIGHT -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>1</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>HW Decoder Max Height</Title>
+     <Description>Set hw decoder max height</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>Set hw decoder max height</ItemTitle>
+       <Value>4320</Value>
+       <Platform>1</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Deblock</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>5</OptionId>
+    <!-- PREFERENCE_KEY_DEBLOCK -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Enable Deblock</Title>
+    <Description>Enable or disable deblock function</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>1</Selected>
+    <CategoryTitle>Deblock</CategoryTitle>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Version</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>99</OptionId>
+    <!-- PREFERENCE_KEY_VERSION -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>3</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Show Version Information</Title>
+    <Description>Display SDK build version/video module version/build time</Description>
+    <UIType>2</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+   </Optionitem>
+  </PreferenceCategory>
+ </Fragment>
+    <Fragment>
+        <FragmentTitle>Client Side DVR</FragmentTitle>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Limit</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>57</OptionId>
+    <!-- PREFERENCE_KEY_CLIENT_DVR -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>1</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Enable Client Side DVR</Title>
+    <Description>Set to enable client side DVR</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <Optionitem>
+     <OptionId>5701</OptionId>
+     <!-- PREFERENCE_KEY_SET_TIME_LIMIT -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>1</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>Time Limit</Title>
+     <Description>Set time limit (ms)</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>Time Limit</ItemTitle>
+       <Value>0</Value>
+       <Platform>1</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+    <Optionitem>
+     <OptionId>5702</OptionId>
+     <!-- PREFERENCE_KEY_SET_STORAGE_LIMIT -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>1</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>Storage Limit</Title>
+     <Description>Set storage limit (byte)</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>Storage Limit</ItemTitle>
+       <Value>0</Value>
+       <Platform>1</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+    </Fragment>
+ <Fragment>
+  <FragmentTitle>Bitrate Adaption / Buffering</FragmentTitle>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Bitrate Adaptation</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>13</OptionId>
+    <!-- PREFERENCE_KEY_CPUADAPTATION -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>CPU Adaptation</Title>
+    <Description>Enable CPU adaptation</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>1</Selected>
+   </Optionitem>
+   <Optionitem>
+    <OptionId>24</OptionId>
+    <!-- PREFERENCE_KEY_RENDER_OPTIMIZATION_FOR_BA -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>1</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Render optimization for BA</Title>
+    <Description>Adding second surface optimize video render when BA</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>1</Selected>
+   </Optionitem>
+   <Optionitem>
+    <OptionId>3812</OptionId>
+    <!-- PREFERENCE_KEY_LIMIT_BA_BY_VIEW_SIZE -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>3</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Limit BA By View Size</Title>
+    <Description>Limit BA by view size</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+   </Optionitem>
+   <Optionitem>
+    <OptionId>3804</OptionId>
+    <!-- PREFERENCE_KEY_BA_START_FAST -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Select BA Start Fast</Title>
+    <Description>Enable select BA start fast</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <DefaultSelected>0</DefaultSelected>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Initial Bitrate</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>18</OptionId>
+    <!-- PREFERENCE_KEY_INITIAL_BITRATE -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>3</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Enable Initial Bitrate</Title>
+    <Description>Set to enable initial bitrate</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <Optionitem>
+     <OptionId>1801</OptionId>
+     <!-- PREFERENCE_KEY_SET_INITIAL_BITRATE -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>Initial Bitrate (kbps)</Title>
+     <Description>Set initial bitrate</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>Set Initial Bitrate</ItemTitle>
+       <Value>-1</Value>
+       <Platform>7</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Bitrate Range</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>19</OptionId>
+    <!-- PREFERENCE_KEY_BITRATE_RANGE -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Set Bitrate Range</Title>
+    <Description>Set bitrate range (kbps)</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <Optionitem>
+     <OptionId>1901</OptionId>
+     <!-- PREFERENCE_KEY_BITRATE_RANGE_LOWER -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>Lower Bound Bitrate Range (kbps)</Title>
+     <Description>Set lower bound of bitrate range lower bound</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>Set Lower Bound of Bitrate Range</ItemTitle>
+       <Value>0</Value>
+       <Platform>7</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+    <Optionitem>
+     <OptionId>1902</OptionId>
+     <!-- PREFERENCE_KEY_BITRATE_RANGE_UPPER -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>Upper Bound Bitrate Range (kbps)</Title>
+     <Description>Set upper bound of bitrate range</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>Set Upper Bound of Bitrate Range</ItemTitle>
+       <Value>0</Value>
+       <Platform>7</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Buffering Time</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>10</OptionId>
+    <!-- PREFERENCE_KEY_MAX_BUFFERING_TIME -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>3</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Max Buffering Time</Title>
+    <Description>Set the maximum length of the source input buffer (ms)</Description>
+    <UIType>3</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList>
+     <item>
+      <ItemTitle>Enter Max Buffering Time (ms)</ItemTitle>
+      <Value>40000</Value>
+      <Platform>3</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+    </ValueList>
+    <Selected>0</Selected>
+   </Optionitem>
+   <Optionitem>
+    <OptionId>35</OptionId>
+    <!-- PREFERENCE_KEY_INITIAL_BUFFERING_TIME -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>3</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Initial Buffering Time</Title>
+    <Description>Set the initial length of the source input buffer (ms)</Description>
+    <UIType>3</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList>
+     <item>
+      <ItemTitle>Enter Initial Buffering Time (ms)</ItemTitle>
+      <Value>4000</Value>
+      <Platform>3</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+    </ValueList>
+    <Selected>0</Selected>
+   </Optionitem>
+   <Optionitem>
+    <OptionId>42</OptionId>
+    <!-- PREFERENCE_KEY_PLAYBACK_BUFFERING_TIME_ID -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>3</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Playback Buffering Time</Title>
+    <Description>Set the buffering time when re-buffering is needed during playback (ms)</Description>
+    <UIType>3</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList>
+     <item>
+      <ItemTitle>Enter Playback Buffering Time (ms)</ItemTitle>
+      <Value>5000</Value>
+      <Platform>3</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+    </ValueList>
+    <Selected>0</Selected>
+   </Optionitem>
+  </PreferenceCategory>
+ </Fragment>
+ <Fragment>
+  <FragmentTitle>Playback Control</FragmentTitle>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Playback Control</PreferenceCategoryTitle>
+            <Optionitem>
+    <OptionId>15</OptionId>
+    <!-- PREFERENCE_KEY_PLAYBACK_LOOP_MODE -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Playback Looping Mode</Title>
+    <Description>Set the playback looping mode</Description>
+    <UIType>2</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                <ValueList>
+                    <item>
+                        <ItemTitle>Exit</ItemTitle>
+                        <Value>0</Value>
+                        <Platform>3</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    </item>
+                    <item>
+                        <ItemTitle>Single Loop</ItemTitle>
+                        <Value>1</Value>
+                        <Platform>3</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    </item>
+                    <item>
+                        <ItemTitle>Playlist Loop</ItemTitle>
+                        <Value>2</Value>
+                        <Platform>3</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    </item>
+                </ValueList>
+    <Selected>0</Selected>
+                <DefaultValue>0</DefaultValue>
+   </Optionitem>
+   <Optionitem>
+    <OptionId>3801</OptionId>
+    <!-- PREFERENCE_KEY_KEEP_LAST_FRAME -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Keep Last Frame</Title>
+    <Description>Enable keep last frame when stop</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <DefaultSelected>0</DefaultSelected>
+   </Optionitem>
+   <Optionitem>
+    <OptionId>3805</OptionId>
+    <!-- PREFERENCE_KEY_DECODE_1ST_FRAME_ASAP -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Decode first frame ASAP</Title>
+    <Description>Enable decode first frame ASAP</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <DefaultSelected>0</DefaultSelected>
+   </Optionitem>
+            <Optionitem>
+                <OptionId>3807</OptionId><!-- PREFERENCE_KEY_PREVENT_SLEEP -->
+                <Enable>1</Enable><!-- 0:disable; 1:enable -->
+                <Platform>2</Platform><!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                <Title>Prevent sleep</Title>
+                <Description>Enable prevent sleep during playback </Description>
+                <UIType>1</UIType><!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                <ValueList></ValueList>
+                <Selected>1</Selected>
+                <DefaultSelected>1</DefaultSelected>
+            </Optionitem>
+   <Optionitem>
+    <OptionId>3813</OptionId>
+    <!-- PREFERENCE_KEY_ENGINETYPE -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>3</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>IFrame FPS</Title>
+    <Description>Select IFrame playback FPS</Description>
+    <UIType>2</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList>
+     <item>
+      <ItemTitle>IFrame only default fps</ItemTitle>
+      <Value>0X00001001</Value>
+      <Platform>1</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+     <item>
+      <ItemTitle>IFrame only 4 fps</ItemTitle>
+      <Value>0X00001002</Value>
+      <Platform>1</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+                </ValueList>
+    <Selected>0</Selected>
+    <DefaultValue>0X00001001</DefaultValue>
+   </Optionitem>
+      <Optionitem>
+          <OptionId>62</OptionId>
+          <!-- PREFERENCE_KEY_SINGLELOOP -->
+          <Enable>1</Enable>
+          <!-- 0:disable; 1:enable -->
+          <Platform>2</Platform>
+          <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+          <Title>Picture in Picture</Title>
+          <Description>Enable Picture in Picture on iPad(iOS 9.0+) if selected AVPlayer engine type</Description>
+          <UIType>1</UIType>
+          <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+          <ValueList/>
+          <Selected>1</Selected>
+     </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Presentation Delay Time</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>39</OptionId>
+    <!-- PREFERENCE_KEY_ENALBE_PRESENTATION_DELAY_TIME -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Set presentation delay time</Title>
+    <Description>Enable set presentation delay time</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <Optionitem>
+     <OptionId>3901</OptionId>
+     <!-- PREFERENCE_KEY_ANALYTICS_DISPLAY_TIME -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>Presentation Delay Time</Title>
+     <Description>Set presentation delay Time (milliseconds)</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>Presentation Delay Time</ItemTitle>
+       <Value>-1</Value>
+       <Platform>7</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Seek</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>3802</OptionId>
+    <!-- PREFERENCE_KEY_SEEK_PRECISE -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Seek Precise</Title>
+    <Description>Enable seek to new position precise</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>1</Selected>
+    <DefaultSelected>1</DefaultSelected>
+   </Optionitem>
+   <Optionitem>
+    <OptionId>45</OptionId>
+    <!-- PREFERENCE_KEY_PREVIOUS_SEEK_TO -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Previous seek to</Title>
+    <Description>Enable previous seek to</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <Optionitem>
+     <OptionId>4501</OptionId>
+     <!-- PREFERENCE_KEY_PREVIOUS_SEEK_TO_VALUE -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>Seek To Value</Title>
+     <Description>Set previous seek to value</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>Set Seek To Value</ItemTitle>
+       <Value>0</Value>
+       <Platform>7</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Policy</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>36</OptionId>
+    <!-- PREFERENCE_KEY_HDCPPOLICY -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>HDCP Policy</Title>
+    <Description>Select the HDCP policy type</Description>
+    <UIType>2</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList>
+     <item>
+      <ItemTitle>NO_CHECK</ItemTitle>
+      <Value>1</Value>
+      <Platform>7</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+     <item>
+      <ItemTitle>DOWNRES</ItemTitle>
+      <Value>2</Value>
+      <Platform>7</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+     <item>
+      <ItemTitle>BLOCK</ItemTitle>
+      <Value>3</Value>
+      <Platform>7</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+    </ValueList>
+    <Selected>0</Selected>
+    <DefaultValue>1</DefaultValue>
+   </Optionitem>
+   <Optionitem>
+    <OptionId>47</OptionId>
+    <!-- PREFERENCE_KEY_LIVE_STREAMING_DVR_POSITION -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- XOR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Live Streaming DVR Position</Title>
+    <Description>Enable or disable Live Streaming DVR Position</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>1</Selected>
+   </Optionitem>
+   <Optionitem>
+    <OptionId>3803</OptionId>
+    <!-- PREFERENCE_KEY_SELECT_AUDIO_SWITCH_IMMEDIATELY -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Enable Immediate Audio Switching</Title>
+    <Description>Switch audio immediately after selection</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>1</Selected>
+    <DefaultSelected>1</DefaultSelected>
+   </Optionitem>
+            <Optionitem>
+                <OptionId>3814</OptionId>
+                <!-- PREFERENCE_KEY_TIMEZONE_UTCTIME -->
+                <Enable>1</Enable>
+                <!-- 0:disable; 1:enable -->
+                <Platform>3</Platform>
+                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                <Title>Enable UTC Time With Time Zone</Title>
+                <Description>Set to get UTC time with timezone offset after selection</Description>
+                <UIType>1</UIType>
+                <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                <ValueList/>
+                <Selected>0</Selected>
+                <DefaultSelected>0</DefaultSelected>
+            </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Default Audio</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>21</OptionId>
+    <!-- PREFERENCE_DEFAULE_AUDIO -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Default Audio</Title>
+    <Description>Select default audio language</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <Optionitem>
+     <OptionId>2101</OptionId>
+     <!-- PREFERENCE_KEY_SET_DEFAULT_AUDIO -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>Default Audio</Title>
+     <Description>Set default audio</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>Set Default Audio</ItemTitle>
+       <Text>eng</Text>
+       <Platform>7</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Push PD</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>32</OptionId>
+    <!-- PREFERENCE_KEY_PUSH_PD -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>3</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Enable Push PD</Title>
+    <Description>Set to enable push pd</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <Optionitem>
+     <OptionId>3201</OptionId>
+     <!-- PREFERENCE_KEY_PUSH_PD_OPEN_DURATION -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>3</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>Push PD Open Duration</Title>
+     <Description>Set push pd open duration(ms)</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>Set Push PD open duration(ms)</ItemTitle>
+       <Value>-1</Value>
+       <Platform>3</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>NTS</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>44</OptionId>
+    <!-- PREFERENCE_KEY_ENTER_NTS -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Enter NTS</Title>
+    <Description>Enable enter nts</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <Optionitem>
+     <OptionId>4401</OptionId>
+     <!-- PREFERENCE_KEY_ENTER_NTS_URL -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>NTS URL</Title>
+     <Description>Set nts playback url</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>Set NTS URL</ItemTitle>
+       <Text>URL</Text>
+       <Platform>7</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+    <Optionitem>
+     <OptionId>4402</OptionId>
+     <!-- PREFERENCE_KEY_ENTER_NTS_MIN_POSITION -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>NTS min position</Title>
+     <Description>Set nts min position</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>Set NTS Min Position</ItemTitle>
+       <Text>0</Text>
+       <Platform>7</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Second Player</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>43</OptionId>
+    <!-- PREFERENCE_KEY_SECOND_PLAYER -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>3</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Second Player</Title>
+    <Description>Enable second player</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <Optionitem>
+     <OptionId>4301</OptionId>
+     <!-- PREFERENCE_KEY_SECOND_PLAYER_PLAYBACK_URL -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>Playback URL</Title>
+     <Description>Set second player playback url</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>Set Playback URL</ItemTitle>
+       <Text>URL</Text>
+       <Platform>7</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Anti Mirror</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>37</OptionId>
+    <!-- PREFERENCE_KEY_ANTIMIRROR -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>3</Platform>
+    <!-- XOR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Anti Mirror Effect</Title>
+    <Description>Enable or disable anti mirror effect</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+   </Optionitem>
+  </PreferenceCategory>
+        <PreferenceCategory>
+            <PreferenceCategoryTitle>Player Time</PreferenceCategoryTitle>
+            <Optionitem>
+                <OptionId>40</OptionId>
+                <!-- OPTION_PLAYER_TIME_LISTENER_ID -->
+                <Enable>1</Enable>
+                <!-- 0:disable; 1:enable -->
+                <Platform>1</Platform>
+                <!-- XOR operation. 1:Android; 2:iOS 4:Plugin -->
+                <Title>Player Time Listener</Title>
+                <Description>Enable or disable player time listener</Description>
+                <UIType>1</UIType>
+                <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                <ValueList/>
+                <Selected>0</Selected>
+            </Optionitem>
+        </PreferenceCategory>
+        <PreferenceCategory>
+            <PreferenceCategoryTitle>Prepare Contents</PreferenceCategoryTitle>
+            <Optionitem>
+                <OptionId>63</OptionId>
+                <!-- PREFERENCE_KEY_ENABLE_PREPARE_CONTENT -->
+                <Enable>1</Enable>
+                <!-- 0:disable; 1:enable -->
+                <Platform>1</Platform>
+                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                <Title>Enable Prepare Contents</Title>
+                <Description>Enable preload prepared content and autoplay after current playback finished.</Description>
+                <UIType>1</UIType>
+                <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                <ValueList/>
+                <Selected>0</Selected>
+                <Optionitem>
+                    <OptionId>6301</OptionId>
+                    <!-- PREFERENCE_KEY_PREPARE_CONTENT_LIST -->
+                    <Enable>1</Enable>
+                    <!-- 0:disable; 1:enable -->
+                    <Platform>1</Platform>
+                    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    <Title>Prepared Content List</Title>
+                    <Description>Input prepared content queue. Seperated by ';' character.</Description>
+                    <UIType>3</UIType>
+                    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                    <ValueList>
+                        <item>
+                            <ItemTitle>Prepared Content List</ItemTitle>
+                            <Text></Text>
+                            <Platform>1</Platform>
+                            <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        </item>
+                    </ValueList>
+                    <Selected>0</Selected>
+                </Optionitem>
+            </Optionitem>
+        </PreferenceCategory>
+ </Fragment>
+ <Fragment>
+  <FragmentTitle>Subtitle</FragmentTitle>
+  <Optionitem>
+   <OptionId>1618</OptionId>
+   <!-- Preview Subtitle -->
+   <Enable>1</Enable>
+   <!-- 0:disable; 1:enable -->
+   <Platform>7</Platform>
+   <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+   <Title>Preview Subtitle</Title>
+   <Description> </Description>
+   <UIType>5</UIType>
+   <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button 5:Preview view -->
+   <ValueList/>
+   <Selected>0</Selected>
+  </Optionitem>
+  <Optionitem>
+   <OptionId>55</OptionId>
+   <!-- PREFERENCE_KEY_CC -->
+   <Enable>1</Enable>
+   <!-- 0:disable; 1:enable -->
+   <Platform>7</Platform>
+   <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+   <Title>Enable Subtitle</Title>
+   <Description>Set to enable subtitle presentation</Description>
+   <UIType>1</UIType>
+   <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+   <ValueList/>
+   <Selected>0</Selected>
+  </Optionitem>
+        <Optionitem>
+            <OptionId>3809</OptionId>
+            <!-- PREFERENCE_KEY_SELECT_SUBTITLE_SWITCH_IMMEDIATELY -->
+            <Enable>1</Enable>
+            <!-- 0:disable; 1:enable -->
+            <Platform>7</Platform>
+            <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+            <Title>Enable Immediate Subtitle Switching</Title>
+            <Description>Switch subtitle immediately after selection</Description>
+            <UIType>1</UIType>
+            <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+            <ValueList/>
+            <Selected>1</Selected>
+            <DefaultSelected>1</DefaultSelected>
+        </Optionitem>
+  <Optionitem>
+   <OptionId>3811</OptionId>
+   <!-- PREFERENCE_KEY_LIMIT_SUBTITLE_TO_EVENT_ID-->
+   <Enable>1</Enable>
+   <!-- 0:disable; 1:enable -->
+   <Platform>3</Platform>
+   <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+   <Title>Subtitle Not Display Mode</Title>
+   <Description>Sent subtitle by event, without rendering</Description>
+   <UIType>1</UIType>
+   <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button 5:Preview view -->
+   <ValueList/>
+   <Selected>0</Selected>
+  </Optionitem>
+  <Optionitem>
+   <OptionId>7</OptionId>
+   <!-- PREFERENCE_KEY_TT_URL -->
+   <Enable>1</Enable>
+   <!-- 0:disable; 1:enable -->
+   <Platform>7</Platform>
+   <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+   <Title>Subtitle URL</Title>
+   <Description>Select subtitle URL to be presented</Description>
+   <UIType>2</UIType>
+   <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+   <ValueList>
+    <item>
+     <ItemTitle>Select External Subtitle File or URL</ItemTitle>
+     <Value>0</Value>
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    </item>
+   </ValueList>
+   <Selected>0</Selected>
+  </Optionitem>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Default Subtitle</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>22</OptionId>
+    <!-- PREFERENCE_KEY_DEFAULT_SUBTITLE -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Default Subtitle</Title>
+    <Description>Select default subtitle language</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <Optionitem>
+     <OptionId>2201</OptionId>
+     <!-- PREFERENCE_KEY_SET_DEFAULT_SUBTITLE -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>Default Subtitle</Title>
+     <Description>Set default subtitle</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>Set Default Subtitle</ItemTitle>
+       <Text>eng</Text>
+       <Platform>7</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Subtitle Settings</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>16</OptionId>
+    <!-- PREFERENCE_KEY_CC_SETTING -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Enable Subtitle Settings</Title>
+    <Description>Set to enable subtitle settings (Disable to reset subtitle settings)</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+                <Optionitem>
+                    <OptionId>1619</OptionId>
+                    <!-- Font Position -->
+                    <Enable>1</Enable>
+                    <!-- 0:disable; 1:enable -->
+                    <Platform>3</Platform>
+                    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    <Title>Enable Subtitle Bounding Box</Title>
+                    <Description>Set to enable subtitle bounding box</Description>
+                    <UIType>1</UIType>
+                    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                    <ValueList/>
+                    <Selected>0</Selected>
+                    <DefaultSelected>0</DefaultSelected>
+                    <Optionitem>
+                        <OptionId>161901</OptionId>
+                        <!-- Set Font Top Percent -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>3</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Top Percent</Title>
+                        <Description>Set the top position using percent based on the area of video display. The valid range is 0 to 100.</Description>
+                        <UIType>3</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <ValueList>
+                            <item>
+                                <ItemTitle>Set Top Percent</ItemTitle>
+                                <Value>84</Value>
+                                <DefaultValue>84</DefaultValue>
+                                <Platform>3</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                        </ValueList>
+                        <Selected>0</Selected>
+                        <DefaultSelected>0</DefaultSelected>
+                    </Optionitem>
+                    <Optionitem>
+                        <OptionId>161902</OptionId>
+                        <!-- Set Font Left Percent -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>3</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Left Percent</Title>
+                        <Description>Set the left position using percent based on the area of video display. The valid range is 0 to 100.</Description>
+                        <UIType>3</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <ValueList>
+                            <item>
+                                <ItemTitle>Set Left Percent</ItemTitle>
+                                <Value>10</Value>
+                                <DefaultValue>10</DefaultValue>
+                                <Platform>3</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                        </ValueList>
+                        <Selected>0</Selected>
+                        <DefaultSelected>0</DefaultSelected>
+                    </Optionitem>
+                    <Optionitem>
+                        <OptionId>161903</OptionId>
+                        <!-- Set Font Bottom Percent -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>3</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Bottom Percent</Title>
+                        <Description>Set the bottom position using percent based on the area of video display. The valid range is 0 to 100.</Description>
+                        <UIType>3</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <ValueList>
+                            <item>
+                                <ItemTitle>Set Bottom Percent</ItemTitle>
+                                <Value>92</Value>
+                                <DefaultValue>92</DefaultValue>
+                                <Platform>3</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                        </ValueList>
+                        <Selected>0</Selected>
+                        <DefaultSelected>0</DefaultSelected>
+                    </Optionitem>
+                    <Optionitem>
+                        <OptionId>161904</OptionId>
+                        <!-- Set Right Percent -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>3</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Right Percent</Title>
+                        <Description>Set the right position using percent based on the area of video display. The valid range is 0 to 100.</Description>
+                        <UIType>3</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <ValueList>
+                            <item>
+                                <ItemTitle>Set Right Percent</ItemTitle>
+                                <Value>90</Value>
+                                <DefaultValue>90</DefaultValue>
+                                <Platform>3</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                        </ValueList>
+                        <Selected>0</Selected>
+                        <DefaultSelected>0</DefaultSelected>
+                    </Optionitem>
+                </Optionitem>
+                <Optionitem>
+                    <OptionId>1620</OptionId>
+                    <!-- Gravity of the bounding box -->
+                    <Enable>1</Enable>
+                    <!-- 0:disable; 1:enable -->
+                    <Platform>3</Platform>
+                    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    <Title>Enable Subtitle Gravity</Title>
+                    <Description>Set to enable subtitle gravity</Description>
+                    <UIType>1</UIType>
+                    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                    <ValueList/>
+                    <Selected>0</Selected>
+                    <DefaultSelected>0</DefaultSelected>
+                    <Optionitem>
+                        <OptionId>162001</OptionId>
+                        <!-- Set horizontal position of the gravity -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>7</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Horizontal Position </Title>
+                        <Description>Set Horizontal Position</Description>
+                        <UIType>2</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <ValueList>
+                            <item>
+                                <ItemTitle>Default</ItemTitle>
+                                <Value>0</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Left</ItemTitle>
+                                <Value>1</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Center</ItemTitle>
+                                <Value>2</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Right</ItemTitle>
+                                <Value>3</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                        </ValueList>
+                        <Selected>0</Selected>
+                        <DefaultSelected>0</DefaultSelected>
+                        <DefaultValue>0</DefaultValue>
+                    </Optionitem>
+                    <Optionitem>
+                        <OptionId>162002</OptionId>
+                        <!-- Set vertical position of the gravity -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>7</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Vertical Position </Title>
+                        <Description>Set Vertical Position</Description>
+                        <UIType>2</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <ValueList>
+                            <item>
+                                <ItemTitle>Default</ItemTitle>
+                                <Value>0</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Top</ItemTitle>
+                                <Value>1</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Middle</ItemTitle>
+                                <Value>2</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Bottom</ItemTitle>
+                                <Value>3</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                        </ValueList>
+                        <Selected>0</Selected>
+                        <DefaultSelected>0</DefaultSelected>
+                        <DefaultValue>0</DefaultValue>
+                    </Optionitem>
+                </Optionitem>
+                <Optionitem>
+                    <OptionId>1621</OptionId>
+                    <!-- set to enable subtitle trim setting -->
+                    <Enable>1</Enable>
+                    <!-- 0:disable; 1:enable -->
+                    <Platform>7</Platform>
+                    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    <Title>Enable Subtitle Trim</Title>
+                    <Description>Enable or disable subtitle trim</Description>
+                    <UIType>1</UIType>
+                    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                    <ValueList/>
+                    <Selected>0</Selected>
+                    <Optionitem>
+                        <OptionId>162101</OptionId>
+                        <!-- Set subtitle trim -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>7</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Subtitle Trim</Title>
+                        <Description>Set subtitle trim characters</Description>
+                        <UIType>3</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <ValueList>
+                            <item>
+                                <ItemTitle>Subtitle Trim Character</ItemTitle>
+                                <Text/>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                        </ValueList>
+                        <Selected>0</Selected>
+                    </Optionitem>
+                </Optionitem>
+                <Optionitem>
+                    <OptionId>1622</OptionId>
+                    <!-- set to enable subtitle auto adjustment setting -->
+                    <Enable>1</Enable>
+                    <!-- 0:disable; 1:enable -->
+                    <Platform>7</Platform>
+                    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    <Title>Enable Subtitle Auto Adjustment</Title>
+                    <Description>Enable or disable subtitle auto adjustment</Description>
+                    <UIType>1</UIType>
+                    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                    <Selected>0</Selected>
+                </Optionitem>
+                <Optionitem>
+                    <OptionId>1602</OptionId>
+                    <!-- Font Size -->
+                    <Enable>1</Enable>
+                    <!-- 0:disable; 1:enable -->
+                    <Platform>7</Platform>
+                    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    <Title>Enable Font size</Title>
+                    <Description>Set to enable font size</Description>
+                    <UIType>1</UIType>
+                    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                    <ValueList/>
+                    <Selected>0</Selected>
+                    <DefaultSelected>0</DefaultSelected>
+                    <Optionitem>
+                        <OptionId>160201</OptionId>
+                        <!-- Set Font Size -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>7</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Font Size</Title>
+                        <Description>Set font size, 50 is half of the default size, and 200 is twice the default size.</Description>
+                        <UIType>3</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <ValueList>
+                            <item>
+                                <ItemTitle>Set Font Size</ItemTitle>
+                                <Value>100</Value>
+                                <DefaultValue>100</DefaultValue>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                        </ValueList>
+                        <Selected>0</Selected>
+                        <DefaultSelected>0</DefaultSelected>
+                    </Optionitem>
+                </Optionitem>
+                <Optionitem>
+                    <OptionId>1623</OptionId>
+                    <!-- Image Size -->
+                    <Enable>1</Enable>
+                    <!-- 0:disable; 1:enable -->
+                    <Platform>3</Platform>
+                    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    <Title>Enable Image size</Title>
+                    <Description>Set to enable image size</Description>
+                    <UIType>1</UIType>
+                    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                    <ValueList/>
+                    <Selected>0</Selected>
+                    <DefaultSelected>0</DefaultSelected>
+                    <Optionitem>
+                        <OptionId>162301</OptionId>
+                        <!-- Set Image Size -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>3</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Image Size</Title>
+                        <Description>Set image size, 50 is half of the default size, and 200 is twice the default size.</Description>
+                        <UIType>3</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <ValueList>
+                            <item>
+                                <ItemTitle>Set Image Size</ItemTitle>
+                                <Value>100</Value>
+                                <DefaultValue>100</DefaultValue>
+                                <Platform>3</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                        </ValueList>
+                        <Selected>0</Selected>
+                        <DefaultSelected>0</DefaultSelected>
+                    </Optionitem>
+                </Optionitem>
+                <Optionitem>
+                    <OptionId>1603</OptionId>
+                    <!-- Font Color -->
+                    <Enable>1</Enable>
+                    <!-- 0:disable; 1:enable -->
+                    <Platform>7</Platform>
+                    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    <Title>Enable Font Color Opacity</Title>
+                    <Description>Set to enable font color</Description>
+                    <UIType>1</UIType>
+                    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                    <ValueList/>
+                    <Selected>0</Selected>
+                    <DefaultSelected>0</DefaultSelected>
+                    <Optionitem>
+                        <OptionId>160301</OptionId>
+                        <!-- Set Color Opacity -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>7</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Font Color Opacity</Title>
+                        <Description>Change color opacity, range is from 50 (semi-transparent) to 100 (opaque)</Description>
+                        <UIType>3</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <ValueList>
+                            <item>
+                                <ItemTitle>Set Font Color Opacity</ItemTitle>
+                                <Value>100</Value>
+                                <DefaultValue>100</DefaultValue>
+                                <MinValue>50</MinValue>
+                                <MaxValue>100</MaxValue>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                        </ValueList>
+                        <Selected>0</Selected>
+                        <DefaultSelected>0</DefaultSelected>
+                    </Optionitem>
+                </Optionitem>
+                <Optionitem>
+                    <OptionId>1604</OptionId>
+                    <!-- Color List-->
+                    <Enable>1</Enable>
+                    <!-- 0:disable; 1:enable -->
+                    <Platform>7</Platform>
+                    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    <Title>Enable Font Color List</Title>
+                    <Description>Set to enable font color list</Description>
+                    <UIType>1</UIType>
+                    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                    <ValueList/>
+                    <Selected>0</Selected>
+                    <DefaultSelected>0</DefaultSelected>
+                    <Optionitem>
+                        <OptionId>160401</OptionId>
+                        <!-- Set Font Color List -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>7</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Font Color List</Title>
+                        <Description>Change font color</Description>
+                        <UIType>2</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <ValueList>
+                            <item>
+                                <ItemTitle>White</ItemTitle>
+                                <Value>16777215</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Black</ItemTitle>
+                                <Value>0</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Red</ItemTitle>
+                                <Value>16711680</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Green</ItemTitle>
+                                <Value>65280</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Blue</ItemTitle>
+                                <Value>255</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Yellow</ItemTitle>
+                                <Value>16776960</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Magenta</ItemTitle>
+                                <Value>16711935</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Cyan</ItemTitle>
+                                <Value>65535</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                        </ValueList>
+                        <Selected>0</Selected>
+                        <DefaultSelected>0</DefaultSelected>
+                        <DefaultValue>16777215</DefaultValue>
+                    </Optionitem>
+                </Optionitem>
+                <Optionitem>
+                    <OptionId>1605</OptionId>
+                    <!-- Background Color -->
+                    <Enable>1</Enable>
+                    <!-- 0:disable; 1:enable -->
+                    <Platform>7</Platform>
+                    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    <Title>Enable Background Color Opacity</Title>
+                    <Description>Set to enable background color Opacity</Description>
+                    <UIType>1</UIType>
+                    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                    <ValueList/>
+                    <Selected>0</Selected>
+                    <DefaultSelected>0</DefaultSelected>
+                    <Optionitem>
+                        <OptionId>160501</OptionId>
+                        <!-- Set Background Color Opacity -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>7</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Background Color Opacity</Title>
+                        <Description>Change background color opacity, range is from 0 (transparent) to 100 (opaque)</Description>
+                        <UIType>3</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <ValueList>
+                            <item>
+                                <ItemTitle>Set Background Color Opacity</ItemTitle>
+                                <Value>100</Value>
+                                <DefaultValue>100</DefaultValue>
+                                <MinValue>0</MinValue>
+                                <MaxValue>100</MaxValue>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                        </ValueList>
+                        <Selected>0</Selected>
+                        <DefaultSelected>0</DefaultSelected>
+                    </Optionitem>
+                </Optionitem>
+                <Optionitem>
+                    <OptionId>1606</OptionId>
+                    <!-- Background Color List-->
+                    <Enable>1</Enable>
+                    <!-- 0:disable; 1:enable -->
+                    <Platform>7</Platform>
+                    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    <Title>Enable Background Color List</Title>
+                    <Description>Set to enable background color list</Description>
+                    <UIType>1</UIType>
+                    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                    <ValueList/>
+                    <Selected>0</Selected>
+                    <DefaultSelected>0</DefaultSelected>
+                    <Optionitem>
+                        <OptionId>160601</OptionId>
+                        <!-- Set Background Color List -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>7</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Background Color List</Title>
+                        <Description>Change background color</Description>
+                        <UIType>2</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <ValueList>
+                            <item>
+                                <ItemTitle>White</ItemTitle>
+                                <Value>16777215</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Black</ItemTitle>
+                                <Value>0</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Red</ItemTitle>
+                                <Value>16711680</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Green</ItemTitle>
+                                <Value>65280</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Blue</ItemTitle>
+                                <Value>255</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Yellow</ItemTitle>
+                                <Value>16776960</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Magenta</ItemTitle>
+                                <Value>16711935</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Cyan</ItemTitle>
+                                <Value>65535</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                        </ValueList>
+                        <Selected>1</Selected>
+                        <DefaultSelected>1</DefaultSelected>
+                        <DefaultValue>0</DefaultValue>
+                    </Optionitem>
+                </Optionitem>
+                <Optionitem>
+                    <OptionId>1607</OptionId>
+                    <!-- Edge Color Opacity-->
+                    <Enable>1</Enable>
+                    <!-- 0:disable; 1:enable -->
+                    <Platform>7</Platform>
+                    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    <Title>Enable Edge Color Opacity</Title>
+                    <Description>Set to enable edge color opacity</Description>
+                    <UIType>1</UIType>
+                    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                    <ValueList/>
+                    <Selected>0</Selected>
+                    <DefaultSelected>0</DefaultSelected>
+                    <Optionitem>
+                        <OptionId>160701</OptionId>
+                        <!-- Set Edge Color Opacity -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>7</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Edge Color Opacity</Title>
+                        <Description>Change edge color opacity, range is from 0 (transparent) to 100 (opaque)</Description>
+                        <UIType>3</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <ValueList>
+                            <item>
+                                <ItemTitle>Set Edge Color Opacity</ItemTitle>
+                                <Value>100</Value>
+                                <DefaultValue>100</DefaultValue>
+                                <MinValue>0</MinValue>
+                                <MaxValue>100</MaxValue>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                        </ValueList>
+                        <Selected>0</Selected>
+                        <DefaultSelected>0</DefaultSelected>
+                    </Optionitem>
+                </Optionitem>
+                <Optionitem>
+                    <OptionId>1608</OptionId>
+                    <!-- Edge Color List-->
+                    <Enable>1</Enable>
+                    <!-- 0:disable; 1:enable -->
+                    <Platform>7</Platform>
+                    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    <Title>Enable Edge Color List</Title>
+                    <Description>Set to enable edge color list</Description>
+                    <UIType>1</UIType>
+                    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                    <ValueList/>
+                    <Selected>0</Selected>
+                    <DefaultSelected>0</DefaultSelected>
+                    <Optionitem>
+                        <OptionId>160801</OptionId>
+                        <!-- Set Edge Color List -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>7</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Edge Color List</Title>
+                        <Description>Change edge color</Description>
+                        <UIType>2</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <ValueList>
+                            <item>
+                                <ItemTitle>White</ItemTitle>
+                                <Value>16777215</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Black</ItemTitle>
+                                <Value>0</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Red</ItemTitle>
+                                <Value>16711680</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Green</ItemTitle>
+                                <Value>65280</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Blue</ItemTitle>
+                                <Value>255</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Yellow</ItemTitle>
+                                <Value>16776960</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Magenta</ItemTitle>
+                                <Value>16711935</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Cyan</ItemTitle>
+                                <Value>65535</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                        </ValueList>
+                        <Selected>4</Selected>
+                        <DefaultSelected>4</DefaultSelected>
+                        <DefaultValue>255</DefaultValue>
+                    </Optionitem>
+                </Optionitem>
+                <Optionitem>
+                    <OptionId>1609</OptionId>
+                    <!-- Edge Type List-->
+                    <Enable>1</Enable>
+                    <!-- 0:disable; 1:enable -->
+                    <Platform>7</Platform>
+                    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    <Title>Enable Edge Type List</Title>
+                    <Description>Set to enable edge type list</Description>
+                    <UIType>1</UIType>
+                    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                    <ValueList/>
+                    <Selected>0</Selected>
+                    <DefaultSelected>0</DefaultSelected>
+                    <Optionitem>
+                        <OptionId>160901</OptionId>
+                        <!-- Edge Type List -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>7</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Edge Type List</Title>
+                        <Description>Change edge type</Description>
+                        <UIType>2</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <ValueList>
+                            <item>
+                                <ItemTitle>None</ItemTitle>
+                                <Value>0</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Raised</ItemTitle>
+                                <Value>1</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Depressed</ItemTitle>
+                                <Value>2</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Uniform</ItemTitle>
+                                <Value>3</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Left Drop Shadow</ItemTitle>
+                                <Value>4</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Right Drop Shadow</ItemTitle>
+                                <Value>5</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                        </ValueList>
+                        <Selected>1</Selected>
+                        <DefaultSelected>1</DefaultSelected>
+                        <DefaultValue>0</DefaultValue>
+                    </Optionitem>
+                </Optionitem>
+                <Optionitem>
+                    <OptionId>1610</OptionId>
+                    <!-- Font -->
+                    <Enable>1</Enable>
+                    <!-- 0:disable; 1:enable -->
+                    <Platform>7</Platform>
+                    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    <Title>Enable Font List</Title>
+                    <Description>Set to enable Font</Description>
+                    <UIType>1</UIType>
+                    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                    <ValueList/>
+                    <Selected>0</Selected>
+                    <DefaultSelected>0</DefaultSelected>
+                    <Optionitem>
+                        <OptionId>161001</OptionId>
+                        <!-- Set Font List -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>7</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Font List</Title>
+                        <Description>Change font</Description>
+                        <UIType>2</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <ValueList>
+                            <item>
+                                <ItemTitle>Default</ItemTitle>
+                                <Value>0</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Courier</ItemTitle>
+                                <Value>1</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Times New Roman</ItemTitle>
+                                <Value>2</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Helvetica</ItemTitle>
+                                <Value>3</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Arial</ItemTitle>
+                                <Value>4</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Dom</ItemTitle>
+                                <Value>5</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Coronet</ItemTitle>
+                                <Value>6</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Gothic</ItemTitle>
+                                <Value>7</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Customer</ItemTitle>
+                                <Value>8</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                        </ValueList>
+                        <Selected>4</Selected>
+                        <DefaultSelected>4</DefaultSelected>
+                        <DefaultValue>4</DefaultValue>
+                    </Optionitem>
+                </Optionitem>
+                <Optionitem>
+                    <OptionId>1611</OptionId>
+                    <!-- Enable Window Background Color Opacity-->
+                    <Enable>1</Enable>
+                    <!-- 0:disable; 1:enable -->
+                    <Platform>7</Platform>
+                    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    <Title>Enable Window Background Color Opacity</Title>
+                    <Description>Set to enable window background color opacity</Description>
+                    <UIType>1</UIType>
+                    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                    <ValueList/>
+                    <Selected>0</Selected>
+                    <DefaultSelected>0</DefaultSelected>
+                    <Optionitem>
+                        <OptionId>161101</OptionId>
+                        <!-- Window Background Color Opacity -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>7</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Window Background Color Opacity</Title>
+                        <Description>Change window background color opacity, range is from 0 (transparent) to 100 (opaque)</Description>
+                        <UIType>3</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <ValueList>
+                            <item>
+                                <ItemTitle>Set Window Background Color Opacity</ItemTitle>
+                                <Value>100</Value>
+                                <DefaultValue>100</DefaultValue>
+                                <MinValue>0</MinValue>
+                                <MaxValue>100</MaxValue>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                        </ValueList>
+                        <Selected>0</Selected>
+                        <DefaultSelected>0</DefaultSelected>
+                    </Optionitem>
+                </Optionitem>
+                <Optionitem>
+                    <OptionId>1612</OptionId>
+                    <!-- Enable Window Background Color List-->
+                    <Enable>1</Enable>
+                    <!-- 0:disable; 1:enable -->
+                    <Platform>7</Platform>
+                    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    <Title>Enable Window Background Color List</Title>
+                    <Description>Set to enable window background color list</Description>
+                    <UIType>1</UIType>
+                    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                    <ValueList/>
+                    <Selected>0</Selected>
+                    <DefaultSelected>0</DefaultSelected>
+                    <Optionitem>
+                        <OptionId>161201</OptionId>
+                        <!-- Window Background Color List -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>7</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Window Background Color List</Title>
+                        <Description>Window background color list</Description>
+                        <UIType>2</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <ValueList>
+                            <item>
+                                <ItemTitle>White</ItemTitle>
+                                <Value>16777215</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Black</ItemTitle>
+                                <Value>0</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Red</ItemTitle>
+                                <Value>16711680</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Green</ItemTitle>
+                                <Value>65280</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Blue</ItemTitle>
+                                <Value>255</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Yellow</ItemTitle>
+                                <Value>16776960</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Magenta</ItemTitle>
+                                <Value>16711935</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                            <item>
+                                <ItemTitle>Cyan</ItemTitle>
+                                <Value>65535</Value>
+                                <Platform>7</Platform>
+                                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                            </item>
+                        </ValueList>
+                        <Selected>1</Selected>
+                        <DefaultSelected>1</DefaultSelected>
+                        <DefaultValue>0</DefaultValue>
+                    </Optionitem>
+                </Optionitem>
+                <Optionitem>
+                    <OptionId>1613</OptionId>
+                    <!-- Underline Font -->
+                    <Enable>1</Enable>
+                    <!-- 0:disable; 1:enable -->
+                    <Platform>7</Platform>
+                    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    <Title>Enable Underline Font</Title>
+                    <Description>Set to enable underline font</Description>
+                    <UIType>1</UIType>
+                    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                    <ValueList/>
+                    <Selected>0</Selected>
+                    <DefaultSelected>0</DefaultSelected>
+                    <Optionitem>
+                        <OptionId>161301</OptionId>
+                        <!-- Set Underline Font -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>7</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Underline Font</Title>
+                        <Description>Set underline font</Description>
+                        <UIType>1</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <ValueList/>
+                        <Selected>0</Selected>
+                        <DefaultSelected>0</DefaultSelected>
+                    </Optionitem>
+                </Optionitem>
+                <Optionitem>
+                    <OptionId>1614</OptionId>
+                    <!-- Bold Font -->
+                    <Enable>1</Enable>
+                    <!-- 0:disable; 1:enable -->
+                    <Platform>7</Platform>
+                    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    <Title>Enable Bold Font</Title>
+                    <Description>Set to enable bold font</Description>
+                    <UIType>1</UIType>
+                    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                    <ValueList/>
+                    <Selected>0</Selected>
+                    <DefaultSelected>0</DefaultSelected>
+                    <Optionitem>
+                        <OptionId>161401</OptionId>
+                        <!-- Set Bold Font -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>7</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Bold Font</Title>
+                        <Description>Set bold font</Description>
+                        <UIType>1</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <Selected>0</Selected>
+                        <DefaultSelected>0</DefaultSelected>
+                    </Optionitem>
+                </Optionitem>
+                <Optionitem>
+                    <OptionId>1615</OptionId>
+                    <!-- Italic Font -->
+                    <Enable>1</Enable>
+                    <!-- 0:disable; 1:enable -->
+                    <Platform>7</Platform>
+                    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    <Title>Enable Italic Font</Title>
+                    <Description>Set to enable italic font</Description>
+                    <UIType>1</UIType>
+                    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                    <Selected>0</Selected>
+                    <DefaultSelected>0</DefaultSelected>
+                    <Optionitem>
+                        <OptionId>161501</OptionId>
+                        <!-- Set Italic Font -->
+                        <Enable>1</Enable>
+                        <!-- 0:disable; 1:enable -->
+                        <Platform>7</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                        <Title>Set Italic Font</Title>
+                        <Description>Set italic font</Description>
+                        <UIType>1</UIType>
+                        <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                        <Selected>0</Selected>
+                        <DefaultSelected>0</DefaultSelected>
+                    </Optionitem>
+                </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+ </Fragment>
+ <Fragment>
+  <FragmentTitle>HTTP</FragmentTitle>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>HTTP Verification</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>28</OptionId>
+    <!-- PREFERENCE_KEY_RTSP_HTTP_VERIFICATION_INFOMATION -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>3</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Enable HTTP Verification Information</Title>
+    <Description>Set the HTTP verification information.</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <Optionitem>
+     <OptionId>2801</OptionId>
+     <!-- PREFERENCE_KEY_RTSP_HTTP_VERIFICATION_USERNAME -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>3</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>Username</Title>
+     <Description>Set username.</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>user name</ItemTitle>
+       <Text>user</Text>
+       <Platform>3</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+    <Optionitem>
+     <OptionId>2802</OptionId>
+     <!-- PREFERENCE_KEY_RTSP_HTTP_VERIFICATION_PASSWORD -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>3</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>Password</Title>
+     <Description>Set password.</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>Password</ItemTitle>
+       <Text>password</Text>
+       <Platform>3</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>HTTP Retry Timeout</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>20</OptionId>
+    <!-- PREFERENCE_KEY_HTTP_RETRY_TIMEOUT -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Enable HTTP Retry Timeout</Title>
+    <Description>Enable set HTTP connection retry timeout.</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <Optionitem>
+     <OptionId>2001</OptionId>
+     <!-- PREFERENCE_KEY_SET_HTTP_RETRY_TIMEOUT -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>HTTP Retry Timeout</Title>
+     <Description>Set HTTP connection retry timeout.</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>HTTP Retry Timeout</ItemTitle>
+       <Value>120</Value>
+       <Platform>7</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>HTTP Gzip Request</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>30</OptionId>
+    <!-- PREFERENCE_KEY_HTTP_GZIP_REQUEST -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Enable HTTP Gzip Request</Title>
+    <Description>Enable or disable sending HTTP request with gzip.</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>HTTP Proxy Settings</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>34</OptionId>
+    <!-- PREFERENCE_KEY_HTTP_PROXXY -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Enable HTTP Proxy Setting</Title>
+    <Description>Set the HTTP proxy.</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <Optionitem>
+     <OptionId>3401</OptionId>
+     <!-- PREFERENCE_KEY_HTTP_PROXY_HOST -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>HTTP Proxy Host</Title>
+     <Description>Set HTTP proxy host.</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>HTTP proxy host</ItemTitle>
+       <Text>0</Text>
+       <Platform>7</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+    <Optionitem>
+     <OptionId>3402</OptionId>
+     <!-- PREFERENCE_KEY_HTTP_PROXY_PORT -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>HTTP Proxy Port</Title>
+     <Description>Set HTTP proxy port.</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>HTTP proxy port</ItemTitle>
+       <Value>0</Value>
+       <Platform>7</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>HTTP Header Setting</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>46</OptionId>
+    <!-- PREFERENCE_KEY_HTTP_HEADER -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Enable HTTP Header Setting</Title>
+    <Description>Set the HTTP header.</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <Optionitem>
+     <OptionId>4601</OptionId>
+     <!-- PREFERENCE_KEY_HTTP_HTTP_HEADER_NAME -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>HTTP Header Name</Title>
+     <Description>Set HTTP Header Name.</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>HTTP header name</ItemTitle>
+       <Text>0</Text>
+       <Platform>7</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+    <Optionitem>
+     <OptionId>4602</OptionId>
+     <!-- PREFERENCE_KEY_HTTP_HEADER_VALUE -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>HTTP Header Value</Title>
+     <Description>Set HTTP header value.</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>HTTP header value</ItemTitle>
+       <Text>0</Text>
+       <Platform>7</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>URL Query String</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>49</OptionId>
+    <!-- PREFERENCE_KEY_ENABLE_URL_QUERY_STRING -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>URL Query String</Title>
+    <Description>Enable URL Query String</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <Optionitem>
+     <OptionId>4901</OptionId>
+     <!-- PREFERENCE_KEY_URL_QUERY_STRING -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>Query String</Title>
+     <Description>Set url query string, refer to the setURLQueryString function in API Reference Manual for the sample format of the query string.</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>Set Query String</ItemTitle>
+       <Text>string</Text>
+       <Platform>7</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>IPV4 / IPV6</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>3806</OptionId>
+    <!-- VO_OSMP_PREF_CONNECTION_IPV4_PRIOR -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Select HTTP connection type</Title>
+    <Description>Select HTTP connection type</Description>
+    <UIType>2</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList>
+     <item>
+      <ItemTitle>IPV6 as prior</ItemTitle>
+      <Value>0x00010001</Value>
+      <Platform>7</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+     <item>
+      <ItemTitle>IPV4 as prior</ItemTitle>
+      <Value>0x00010002</Value>
+      <Platform>7</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+     <item>
+      <ItemTitle>Auto (Try both, use first one on success)</ItemTitle>
+      <Value>0x00010003</Value>
+      <Platform>7</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+    </ValueList>
+    <Selected>0</Selected>
+    <DefaultValue>0x00010001</DefaultValue>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>HTTP Download Failure</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>3810</OptionId>
+    <!-- OPTION_ENABLE_HTTP_DOWNLOAD_FAILURE_WITH_PAYLOAD -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>3</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Enable Callback with Payload</Title>
+    <Description>Enable to get response payload when HTTP download failed </Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+   </Optionitem>
+  </PreferenceCategory>
+ </Fragment>
+ <Fragment>
+  <FragmentTitle>RTSP</FragmentTitle>
+  <Optionitem>
+   <OptionId>14</OptionId>
+   <!-- PREFERENCE_KEY_RTSPCONNECTION -->
+   <Enable>1</Enable>
+   <!-- 0:disable; 1:enable -->
+   <Platform>3</Platform>
+   <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+   <Title>RTSP Connection Type</Title>
+   <Description>Select the RTSP connection type</Description>
+   <UIType>2</UIType>
+   <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+   <ValueList>
+    <item>
+     <ItemTitle>Automatic(UDP is priority)</ItemTitle>
+     <Value>0</Value>
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    </item>
+    <item>
+     <ItemTitle>TCP</ItemTitle>
+     <Value>1</Value>
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    </item>
+    <item>
+     <ItemTitle>UDP</ItemTitle>
+     <Value>2</Value>
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    </item>
+   </ValueList>
+   <Selected>0</Selected>
+   <DefaultValue>0</DefaultValue>
+  </Optionitem>
+  <Optionitem>
+   <OptionId>29</OptionId>
+   <!-- PREFERENCE_KEY_LOW_LATENCY -->
+   <Enable>1</Enable>
+   <!-- 0:disable; 1:enable -->
+   <Platform>3</Platform>
+   <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+   <Title>Enable Low Latency Video</Title>
+   <Description>Set low latency video</Description>
+   <UIType>1</UIType>
+   <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+   <ValueList/>
+   <Selected>0</Selected>
+  </Optionitem>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>RTSP HTTP Port</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>23</OptionId>
+    <!-- PREFERENCE_KEY_RTSP_HTTP_PORT -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>3</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Enable RTSP HTTP Port</Title>
+    <Description>Set to enable RTSP HTTP port</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <Optionitem>
+     <OptionId>2301</OptionId>
+     <!-- PREFERENCE_KEY_RTSP_HTTP_PORT -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>RTSP HTTP Port</Title>
+     <Description>Set RTSP HTTP port</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>Set RTSP HTTP port</ItemTitle>
+       <Value>0</Value>
+       <Platform>7</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>RTSP Max Socket Error Count</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>25</OptionId>
+    <!-- PREFERENCE_KEY_RTSP_MAX_SOCKET_ERROR_COUNT -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Enable RTSP Max Socket Error Count</Title>
+    <Description>Enable set RTSP max socket error count.</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <Optionitem>
+     <OptionId>2501</OptionId>
+     <!-- PREFERENCE_KEY_SET_RTSP_MAX_SOCKET_ERROR_COUNT -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>RTSP Max Socket Error Count</Title>
+     <Description>Set RTSP max socket error count.</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>RTSP Max Socket Error Count</ItemTitle>
+       <Value>20000</Value>
+       <Platform>7</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>RTSP Connection Timeout</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>26</OptionId>
+    <!-- PREFERENCE_KEY_RTSP_CONNECTION_TIMEOUT -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Enable RTSP Connection Timeout</Title>
+    <Description>Enable set RTSP connection timeout.</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <Optionitem>
+     <OptionId>2601</OptionId>
+     <!-- PREFERENCE_KEY_SET_RTSP_CONNECTION_TIMEOUT -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>RTSP Connection Timeout</Title>
+     <Description>Set RTSP connection timeout.</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>RTSP Connection Timeout</ItemTitle>
+       <Value>10</Value>
+       <Platform>7</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+ </Fragment>
+ <Fragment>
+  <FragmentTitle>Analytics</FragmentTitle>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Analytics Display</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>27</OptionId>
+    <!-- PREFERENCE_KEY_ENALBE_ANALYTICS_DISPLAY -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Enable Analytics Display</Title>
+    <Description>Enable analytics display with time</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <Optionitem>
+     <OptionId>2701</OptionId>
+     <!-- PREFERENCE_KEY_ANALYTICS_DISPLAY_TIME -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>Analytics Display Time</Title>
+     <Description>Set analytics display Time(set time to 0 to disable)</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>Analytics Display Time</ItemTitle>
+       <Value>3</Value>
+       <Platform>7</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Analytics Agent</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>56</OptionId>
+    <!-- PREFERENCE_KEY_ANALYTICS_TOTP_ID -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Analytics TOTP ID</Title>
+    <Description>Set Analytics TOTP ID</Description>
+    <UIType>3</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList>
+     <item>
+      <ItemTitle>Enter TOTP ID</ItemTitle>
+      <Text/>
+      <Platform>7</Platform>
+      <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     </item>
+    </ValueList>
+    <Selected>0</Selected>
+   </Optionitem>
+   <Optionitem>
+    <OptionId>50</OptionId>
+    <!-- PREFERENCE_KEY_ANALYTICS_AGENT -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>7</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Enable Analytics Agent</Title>
+    <Description>Enable or disable analytics agent</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <Optionitem>
+     <OptionId>5001</OptionId>
+     <!-- PREFERENCE_KEY_ANALYTICS_AGENT_CUID -->
+     <Enable>1</Enable>
+     <!-- 0:disable; 1:enable -->
+     <Platform>7</Platform>
+     <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+     <Title>Analytics Agent CUID</Title>
+     <Description>Set analytics agent CUID (set as blank to disable)</Description>
+     <UIType>3</UIType>
+     <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+     <ValueList>
+      <item>
+       <ItemTitle>Analytics Agent CUID</ItemTitle>
+       <Text/>
+       <Platform>7</Platform>
+       <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+      </item>
+     </ValueList>
+     <Selected>0</Selected>
+    </Optionitem>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Analytics Export</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>41</OptionId>
+    <!-- PREFERENCE_KEY_ANALYTICS_EXPORT -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>3</Platform>
+    <!-- XOR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Enable Analytics Export</Title>
+    <Description>Set to enable Analytics Export</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+   </Optionitem>
+  </PreferenceCategory>
+        <PreferenceCategory>
+            <PreferenceCategoryTitle>Analytics Info</PreferenceCategoryTitle>
+            <Optionitem>
+                <OptionId>53</OptionId>
+                <!-- PREFERENCE_KEY_ANALYTICS_ADD_INFO -->
+                <Enable>1</Enable>
+                <!-- 0:disable; 1:enable -->
+                <Platform>3</Platform>
+                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                <Title>Add Analytics Info</Title>
+                <Description>Add Analytics Info(key1;value1\nkey2;value2) Example(AS::cd1;value1\nAS::cd2;value2)</Description>
+                <UIType>3</UIType>
+                <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                <ValueList>
+                    <item>
+                        <ItemTitle>Add Analytics Info</ItemTitle>
+                        <Text></Text>
+                        <Platform>3</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    </item>
+                </ValueList>
+                <Selected>0</Selected>
+            </Optionitem>
+        </PreferenceCategory>
+ </Fragment>
+    <Fragment>
+        <FragmentTitle>AD</FragmentTitle>
+        <PreferenceCategory>
+            <PreferenceCategoryTitle>AD Playback Settings</PreferenceCategoryTitle>
+        </PreferenceCategory>
+    </Fragment>
+ <Fragment>
+  <FragmentTitle>Download Manager</FragmentTitle>
+  <Optionitem>
+   <OptionId>12</OptionId>
+   <!-- PREFERENCE_KEY_DOWNLOAD -->
+   <Enable>1</Enable>
+   <!-- 0:disable; 1:enable -->
+   <Platform>3</Platform>
+   <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+   <Title>Enable Download</Title>
+   <Description>Download the video locally while playing</Description>
+   <UIType>1</UIType>
+   <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+   <ValueList/>
+   <Selected>0</Selected>
+   <Optionitem>
+    <OptionId>1202</OptionId>
+    <!-- set the download directory -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>3</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Set Download Directory</Title>
+    <Description>User specified download directory</Description>
+    <UIType>3</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                <ValueList>
+                    <item>
+                        <ItemTitle>Download Directory</ItemTitle>
+                        <Text/>
+                        <Platform>3</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    </item>
+                </ValueList>
+    <Selected>0</Selected>
+   </Optionitem>
+   <Optionitem>
+    <OptionId>1203</OptionId>
+    <!-- downloader operation -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>3</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Downloader Operations</Title>
+    <Description>Downloader Operations(Start, Cancel, Pause, Resume)</Description>
+    <UIType>4</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+    <DefaultSelected>0</DefaultSelected>
+   </Optionitem>
+  </Optionitem>
+  <Optionitem>
+   <OptionId>1201</OptionId>
+   <!-- delete downloaded contents -->
+   <Enable>1</Enable>
+   <!-- 0:disable; 1:enable -->
+   <Platform>7</Platform>
+   <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+   <Title>Delete Downloader File</Title>
+   <Description>Delete downloader file list</Description>
+   <UIType>4</UIType>
+   <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+   <ValueList/>
+   <Selected>0</Selected>
+   <DefaultSelected>0</DefaultSelected>
+  </Optionitem>
+ </Fragment>
+ <Fragment>
+  <FragmentTitle>Video 360</FragmentTitle>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Spherical Video Settings</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>51</OptionId>
+    <!-- PREFERENCE_KEY_SPHERICAL_VIDED -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>3</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Spherical Video</Title>
+    <Description>Enable Spherical Video</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+   </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>CardBoard Video Settings</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>54</OptionId>
+    <!-- PREFERENCE_KEY_CARDBOARD_VIDED -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>3</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>CardBoard Video</Title>
+    <Description>Enable CardBoard Video</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+   </Optionitem>
+            <Optionitem>
+                <OptionId>3815</OptionId>
+                <!-- PREFERENCE_KEY_CARD_BOARD_STYLE -->
+                <Enable>1</Enable>
+                <!-- 0:disable; 1:enable -->
+                <Platform>3</Platform>
+                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                <Title>Enable Cardboard VR style</Title>
+                <Description>Set to enable Cardboard VR style</Description>
+                <UIType>1</UIType>
+                <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                <ValueList/>
+                <Selected>1</Selected>
+                <DefaultSelected>1</DefaultSelected>
+            </Optionitem>
+  </PreferenceCategory>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Cube Video Settings</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>58</OptionId>
+    <!-- PREFERENCE_KEY_CUBE_VIDED -->
+    <Enable>1</Enable>
+    <!-- 0:disable; 1:enable -->
+    <Platform>3</Platform>
+    <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Cube Video</Title>
+    <Description>Enable Cube Video</Description>
+    <UIType>1</UIType>
+    <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <ValueList/>
+    <Selected>0</Selected>
+   </Optionitem>
+  </PreferenceCategory>
+ </Fragment>
+ <Fragment>
+  <FragmentTitle>Audio/Video Postprocessing</FragmentTitle>
+  <Optionitem>
+   <OptionId>4</OptionId>
+   <!-- PREFERENCE_KEY_DOLBYEFFECT -->
+   <Enable>1</Enable>
+   <!-- 0:disable; 1:enable -->
+   <Platform>7</Platform>
+   <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+   <Title>Dolby Surround Module</Title>
+   <Description>Set to load Dolby Surround module</Description>
+   <UIType>1</UIType>
+   <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+   <ValueList/>
+   <Selected>0</Selected>
+  </Optionitem>
+  <Optionitem>
+   <OptionId>31</OptionId>
+   <!-- PREFERENCE_KEY_SEI_PROCESS_VIDEO -->
+   <Enable>1</Enable>
+   <!-- 0:disable; 1:enable -->
+   <Platform>3</Platform>
+   <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+   <Title>Enable SEI Post Process Video</Title>
+   <Description>Enable or disable to post process video data with SEI</Description>
+   <UIType>1</UIType>
+   <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+   <ValueList/>
+   <Selected>0</Selected>
+  </Optionitem>
+  <Optionitem>
+   <OptionId>3808</OptionId>
+   <!-- VO_OSMP_PREF_SEI_POST_PROCESS_LOW_RES_ENHANCEMENT_OFF -->
+   <Enable>1</Enable>
+   <!-- 0:disable; 1:enable -->
+   <Platform>3</Platform>
+   <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+   <Title>Post process video low resolution</Title>
+   <Description>Post process video low resolution enhancement</Description>
+   <UIType>1</UIType>
+   <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+   <ValueList/>
+   <Selected>0</Selected>
+   <DefaultSelected>0</DefaultSelected>
+  </Optionitem>
+ </Fragment>
+     <Fragment>
+  <FragmentTitle>Misc</FragmentTitle>
+  <Optionitem>
+   <OptionId>59</OptionId><!-- PREFERENCE_SPECIAL_CONFIGURATION -->
+   <Enable>1</Enable><!-- 0:disable; 1:enable -->
+   <Platform>3</Platform><!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+   <Title>Special Configuration</Title>
+   <Description>Special Configuration</Description>
+   <UIType>3</UIType><!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+   <ValueList>
+    <item>
+     <ItemTitle>Special Configuration</ItemTitle>
+     <Text></Text>
+     <Platform>3</Platform><!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    </item>
+   </ValueList>
+   <Selected>0</Selected>
+  </Optionitem>
+  <PreferenceCategory>
+   <PreferenceCategoryTitle>Thumbnail</PreferenceCategoryTitle>
+   <Optionitem>
+    <OptionId>6001</OptionId><!-- PREFERENCE_KEY_THUNBNAIL -->
+    <Enable>1</Enable><!-- 0:disable; 1:enable -->
+    <Platform>3</Platform><!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+    <Title>Enable Thumbnail</Title>
+    <Description>Set to enable Thumbnail feature</Description>
+    <UIType>1</UIType><!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+    <Selected>0</Selected>
+   </Optionitem>
+   <Optionitem>
+                <OptionId>6002</OptionId>
+                <Enable>1</Enable>
+                <!-- 0:disable; 1:enable -->
+                <Platform>7</Platform>
+                <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                <Title>Thumbnail URI</Title>
+                <Description>Select external thumbnail URI to be presented</Description>
+                <UIType>2</UIType>
+                <!-- 1:Check box; 2:Radio button; 3:Edit box 4:Button -->
+                <ValueList>
+                    <item>
+                        <ItemTitle>Disabled</ItemTitle>
+                        <Value>0</Value>
+                        <Platform>7</Platform>
+                        <!-- OR operation. 1:Android; 2:iOS 4:Plugin -->
+                    </item>
+                </ValueList>
+                <Selected>0</Selected>
+            </Optionitem>
+  </PreferenceCategory>
+ </Fragment>
+</Option>

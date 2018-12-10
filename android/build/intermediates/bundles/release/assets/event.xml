@@ -1,0 +1,1190 @@
+<EventConfig>
+	<OSMPEvent>
+		<!-- If Event need deal with param value (correct / incorrect),  Action = param value (correct) * 1000 + action type number. eg: param value (correct) = 1, Action = 1 * 1000 + 4 -->
+		<Event>
+			<EventId>0X00000001</EventId>
+			<!-- VO_OSMP_CB_PLAY_COMPLETE -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received playback completed event</Description>
+		</Event>
+		<Event>
+			<EventId>0X00000003</EventId>
+			<!-- VO_OSMP_CB_VIDEO_START_BUFFER -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received video start buffering event</Description>
+		</Event>
+		<Event>
+			<EventId>0X00000004</EventId>
+			<!-- VO_OSMP_CB_VIDEO_STOP_BUFFER -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received video stop buffering event</Description>
+		</Event>
+		<Event>
+			<EventId>0X00000005</EventId>
+			<!-- VO_OSMP_CB_AUDIO_START_BUFFER -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received audio start buffering event</Description>
+		</Event>
+		<Event>
+			<EventId>0X00000006</EventId>
+			<!-- VO_OSMP_CB_AUDIO_STOP_BUFFER -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received audio stop buffering event</Description>
+		</Event>
+		<Event>
+			<EventId>0X0000000D</EventId>
+			<!-- VO_OSMP_CB_SEEK_COMPLETE -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received seek completed event</Description>
+		</Event>
+		<Event>
+			<EventId>0X0000000E</EventId>
+			<!-- VO_OSMP_CB_VIDEO_ASPECT_RATIO -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received video aspect ratio event, param1 is %s</Description>
+			<Param1>
+				<item value="0">0, original</item>
+				<item value="1">1, 1:1</item>
+				<item value="2">2, 4:3</item>
+				<item value="3">3, 16:9</item>
+				<item value="4">4, 2:1</item>
+				<item value="5">5, 2.33:1</item>
+			</Param1>
+		</Event>
+		<Event>
+			<EventId>0X0000000F</EventId>
+			<!-- VO_OSMP_CB_VIDEO_SIZE_CHANGED -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received video size changed event, param1 is %d, param2 is %d</Description>
+			<Param1/>
+			<Param2/>
+		</Event>
+		<Event>
+			<EventId>0X80000010</EventId>
+			<!-- VO_OSMP_CB_CODEC_NOT_SUPPORT -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>2</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>3</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Codec not supported, need switch to SW</Description>
+		</Event>
+		<Event>
+			<EventId>0X00000011</EventId>
+			<!-- VO_OSMP_CB_DEBLOCK -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received deblock event, param1 is %s</Description>
+			<Param1>
+				<item value="0">0, disable</item>
+				<item value="1">1, enable</item>
+			</Param1>
+		</Event>
+		<Event>
+			<EventId>0X00000013</EventId>
+			<!-- VO_OSMP_CB_HW_DECODER_STATUS -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1004</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received HW decoder status event, param1 is %s</Description>
+			<Param1>
+				<item value="0">0, error</item>
+				<item value="1">1, available</item>
+			</Param1>
+		</Event>
+		<Event>
+			<EventId>0X00000019</EventId>
+			<!-- VO_OSMP_CB_SEI_INFO -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]SEI %s</Description>
+			<Param1>
+				<item value="1">Info CpbDpbDelaysPresentFlag: %d, CpbRemovalDelay: %d, DpbOutputDelay: %d, NumClockTs: %d, PictureStructure: %d, PictureStructurePresentFlag: %d</item>
+				<item value="2">User Data Unregistered Info FieldCount: %d</item>
+			</Param1>
+		</Event>
+		<Event>
+			<EventId>0x00000024</EventId>
+			<!-- VO_OSMP_CB_OUTPUT_CONTROL_BLOCK_PLAYBACK -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Playback blocked</Description>
+		</Event>
+		<Event>
+			<EventId>0x00000025</EventId>
+			<!-- VO_OSMP_CB_OUTPUT_CONTROL_BLOCK_OUTPUT -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Output blocked, type %d %s </Description>
+            <Param1/>
+            <Param2>
+                <item value="0">be blocked</item>
+                <item value="1">is playable</item>
+            </Param2>
+		</Event>
+		<Event>
+			<EventId>0x00000026</EventId>
+			<!-- VO_OSMP_CB_OUTPUT_CONTROL_CHANGE_RESOLUTION -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Resolution downgraded,current mode:%s</Description>
+			<Param1>
+				<item value="0">0, normal mode</item>
+				<item value="1">1, downgraded mode</item>
+			</Param1>
+		</Event>
+		<Event>
+			<EventId>0x00000033</EventId>
+			<!-- VO_OSMP_CB_DECODER_TYPE -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]current decoder type:%s</Description>
+			<Param1>
+				<item value="0X00000000">VO_OSMP_DEC_NONE</item>
+				<item value="0X00000001">VO_OSMP_DEC_VIDEO_SW</item>
+				<item value="0X00000002">VO_OSMP_DEC_VIDEO_IOMX</item>
+				<item value="0X00000004">VO_OSMP_DEC_VIDEO_MEDIACODEC</item>
+				<item value="0X00000100">VO_OSMP_DEC_VIDEO_HARDWARE_AUTO_SELECTED</item>
+				<item value="0X00100000">VO_OSMP_DEC_AUDIO_SW</item>
+				<item value="0X00200000">VO_OSMP_DEC_AUDIO_MEDIACODEC</item>
+				<item value="0XFFFFFFFF">VO_OSMP_DECODER_TYPE_MAX</item>
+			</Param1>
+		</Event>
+		<Event>
+				<EventId>0X00000034</EventId>
+				<!-- VO_OSMP_CB_THUMBNAILS_REQUEST_UPDATE -->
+				<Enable>1</Enable>
+				<!-- 0:disable; 1:enable  -->
+				<Action>1</Action>
+				<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+				<AppBehavior>0</AppBehavior>
+				<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+				<Description>[APP][EVENT]Received thumbnails request update event</Description>
+		</Event>
+		<Event>
+				<EventId>0X00000035</EventId>
+				<!-- VO_OSMP_CB_THUMBNAILS_REQUEST_FINISH -->
+				<Enable>1</Enable>
+				<!-- 0:disable; 1:enable  -->
+				<Action>1</Action>
+				<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+				<AppBehavior>0</AppBehavior>
+				<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+				<Description>[APP][EVENT]Received thumbnails request finish event</Description>
+		</Event>
+		<Event>
+                <EventId>0X00000036</EventId>
+                <!-- VO_OSMP_CB_PLAYSTATE_CHANGED -->
+                <Enable>1</Enable>
+                <!-- 0:disable; 1:enable  -->
+                <Action>1</Action>
+                <!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+                <AppBehavior>0</AppBehavior>
+                <!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+                <Description>[APP][EVENT]Received VO_OSMP_CB_PLAYSTATE_CHANGED: state changed from %s to %s</Description>
+                <Param1>
+                       <item value="0">VO_OSMP_STATE_UNINITIALIZED</item>
+				       <item value="1">VO_OSMP_STATE_INITIALIZED</item>
+				       <item value="2">VO_OSMP_STATE_OPENING</item>
+				       <item value="3">VO_OSMP_STATE_OPENED</item>
+				       <item value="4">VO_OSMP_STATE_PLAYING</item>
+				       <item value="5">VO_OSMP_STATE_PAUSED</item>
+				       <item value="6">VO_OSMP_STATE_STOPPED</item>
+				       <item value="7">VO_OSMP_STATE_SUSPENDED</item>
+				       <item value="8">VO_OSMP_STATE_DESTROYED</item>
+			    </Param1>
+			    <Param2>
+			           <item value="0">VO_OSMP_STATE_UNINITIALIZED</item>
+				       <item value="1">VO_OSMP_STATE_INITIALIZED</item>
+				       <item value="2">VO_OSMP_STATE_OPENING</item>
+				       <item value="3">VO_OSMP_STATE_OPENED</item>
+				       <item value="4">VO_OSMP_STATE_PLAYING</item>
+				       <item value="5">VO_OSMP_STATE_PAUSED</item>
+				       <item value="6">VO_OSMP_STATE_STOPPED</item>
+				       <item value="7">VO_OSMP_STATE_SUSPENDED</item>
+				       <item value="8">VO_OSMP_STATE_DESTROYED</item>
+			    </Param2>
+		</Event>
+		<Event>
+			<EventId>0X000000037</EventId>
+			<!-- VO_OSMP_CB_SUBTITLE_INFO -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received subtitle, subtitle is %s</Description>
+		</Event>
+		<Event>
+			<EventId>0X00000040</EventId>
+			<!-- VO_OSMP_CB_THUMBNAILS_REQUEST_URI_UPDATE -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received thumbnails request URI update event</Description>
+		</Event>
+		<Event>
+			<EventId>0X02000001</EventId>
+			<!-- VO_OSMP_SRC_CB_CONNECTING -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received source connecting event</Description>
+		</Event>
+		<Event>
+			<EventId>0X02000002</EventId>
+			<!-- VO_OSMP_SRC_CB_CONNECTION_FINISHED -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received source connection finished event</Description>
+		</Event>
+		<Event>
+			<EventId>0X02000005</EventId>
+			<!-- VO_OSMP_SRC_CB_DOWNLOAD_STATUS -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received source download status event, param1 is %d</Description>
+			<Param1/>
+		</Event>
+		<Event>
+			<EventId>0X0200000B</EventId>
+			<!-- VO_OSMP_SRC_CB_BA_HAPPENED -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received source bitrate adaptation occured event, param1 is %d</Description>
+			<Param1/>
+		</Event>
+		<Event>
+			<EventId>0X0200000C</EventId>
+			<!-- VO_OSMP_SRC_CB_DRM_NOT_SECURE -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received DRM not secure event</Description>
+		</Event>
+		<Event>
+			<EventId>0X0200000F</EventId>
+			<!-- VO_OSMP_SRC_CB_DOWNLOAD_FAIL_RECOVER_SUCCESS -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download failed, recovery successful event</Description>
+		</Event>
+		<Event>
+			<EventId>0X02000010</EventId>
+			<!-- VO_OSMP_SRC_CB_OPEN_FINISHED -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>4</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received open finished event, param1 is %x</Description>
+			<Param1/>
+		</Event>
+		<Event>
+			<EventId>0X02000020</EventId>
+			<!-- VO_OSMP_SRC_CB_CUSTOMER_TAG -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received customer tag event, param1 is %s</Description>
+            <Param1>
+                <item value="1">VO_OSMP_SRC_CUSTOMERTAGID_TIMEDTAG,param2(time stamp) is %d,timed tag is %s</item>
+                <item value="2">VO_OSMP_SRC_CUSTOMERTAG_DASH_EMSG_BOX, param2(time stamp) is %d, message box is %s, decoded message_data is %s</item>
+            </Param1>
+		</Event>
+		<Event>
+			<EventId>0X02000060</EventId>
+			<!-- VO_OSMP_SRC_CB_RTSP_ERROR -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received RTSP error event, param1 is %s</Description>
+			<Param1>
+				<item value="1">1, connection failed</item>
+				<item value="2">2, description failed</item>
+				<item value="3">3, setup failed</item>
+				<item value="4">4, play failed</item>
+				<item value="5">5, pause failed</item>
+				<item value="6">6, option failed</item>
+				<item value="7">7, socket error in RTSP channel</item>
+				<item value="8">8, HTTP error</item>
+				<item value="9">9, URL has been expired</item>
+			</Param1>
+		</Event>
+		<Event>
+			<EventId>0X02000070</EventId>
+			<!-- VO_OSMP_SRC_CB_SEEK_COMPLETE -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>5</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received source seek completed event, param1 is %d, param2 is %s</Description>
+			<Param1/>
+			<Param2>
+				<item value="0">0, seek success</item>
+				<item value="2164260869">0X81000005, seek failed</item>
+			</Param2>
+		</Event>
+		<Event>
+			<EventId>0X02000071</EventId>
+			<!-- VO_OSMP_SRC_CB_PROGRAM_CHANGED -->
+			<Enable>0</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received program changed event</Description>
+		</Event>
+		<Event>
+			<EventId>0x02000072</EventId>
+			<!-- VO_OSMP_SRC_CB_PROGRAM_RESET -->
+			<Enable>0</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received program reset event</Description>
+		</Event>
+		<Event>
+			<EventId>0x02000075</EventId>
+			<!-- VO_OSMP_SRC_CB_PD_DOWNLOAD_POSITION -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download position event, param1 is %d</Description>
+			<Param1/>
+		</Event>
+		<Event>
+			<EventId>0x02000076</EventId>
+			<!-- VO_OSMP_SRC_CB_PD_BUFFERING_PERCENT -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received buffering percent event, param1 is %d</Description>
+			<Param1/>
+		</Event>
+		<Event>
+			<EventId>0X02000078</EventId>
+			<!-- VO_OSMP_SRC_CB_PREFERRED_AUDIO_LANGUAGE -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received the preferred audio language, language is %d</Description>
+			<Param1/>
+		</Event>
+		<Event>
+			<EventId>0X02000079</EventId>
+			<!-- VO_OSMP_SRC_CB_PREFERRED_SUBTITLE_LANGUAGE -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received the preferred subtitle language, param1 is %d</Description>
+			<Param1/>
+		</Event>
+		<Event>
+			<EventId>0X0200007B</EventId>
+			<!-- VO_OSMP_SRC_CB_DRM_WARNING -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received Drm engine warning, param1 is %d</Description>
+			<Param1/>
+		</Event>
+        <Event>
+            <EventId>0X0200007C</EventId>
+            <!-- VO_OSMP_SRC_CB_DRM_PROVISION_FINISH -->
+            <Enable>1</Enable>
+            <!-- 0:disable; 1:enable  -->
+            <Action>1</Action>
+            <!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+            <AppBehavior>0</AppBehavior>
+            <!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+            <Description>[APP][EVENT]Received DRM provision finish</Description>
+            <Param1/>
+        </Event>
+        <Event>
+			<EventId>0X02000030</EventId>
+			<!-- VO_OSMP_SRC_CB_ADAPTIVE_STREAMING_INFO -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received adaptive streaming info event, param1 is %s, param2 is %d</Description>
+			<Param1>
+				<item value="1">1</item>
+				<item value="2">2</item>
+				<item value="3">3</item>
+				<item value="4">4</item>
+				<item value="5">5</item>
+                <item value="6">6, chunk download ok: chunkID=%ld, downloadTime=%ld, downloadSize=%d, bitrate=%d</item>
+				<item value="7">7, playlist download ok: RootUrl=%s, NewUrl=%s, Url=%s, Data=%s, DataSize=%d, PlayListType=%s, ErrorType=%s, ErrorCode=%x</item>
+				<item value="8">8</item>
+				<item value="9">9</item>
+				<item value="10">A</item>
+				<item value="11">B</item>
+				<item value="12">C</item>
+				<item value="13">D, session data: Index=%d, DataID=%s, Value=%s, URI=%s, Language=%s</item>
+			</Param1>
+			<Param2/>
+            <ObjValueList>
+                <ObjParam value="errorType">
+                    <item value="0x00000000">VO_OSMP_STREAMING_ERROR_NONE</item>
+                    <item value="0x00000001">VO_OSMP_STREAMING_IO_CONNECTION_FAIL</item>
+                    <item value="0x00000002">VO_OSMP_STREAMING_IO_RESPONSE_TOOLARGE</item>
+                    <item value="0x00000003">VO_OSMP_STREAMING_IO_GET_RESPONSE_TIMEOUT</item>
+                    <item value="0x00000004">VO_OSMP_STREAMING_IO_READ_DATA_ERROR</item>
+                    <item value="0x00000005">VO_OSMP_STREAMING_IO_OUT_OF_MEMORY</item>
+                    <item value="0x00000006">VO_OSMP_STREAMING_IO_REDIRECT_BAD_URL</item>
+                    <item value="0x00000007">VO_OSMP_STREAMING_IO_REDIRECT_URL_MISSING</item>
+                    <item value="0x00000008">VO_OSMP_STREAMING_IO_DNS_ERROR</item>
+                    <item value="0x00000009">VO_OSMP_STREAMING_IO_HTTP_ERROR</item>
+                    <item value="0x00000030">VO_OSMP_STREAMING_DRM_NOT_SUPPORTED</item>
+                    <item value="0x00000031">VO_OSMP_STREAMING_DRM_NO_SDK_LICENSE</item>
+                    <item value="0x00000032">VO_OSMP_STREAMING_DRM_HANDLE_NULL_POINTER</item>
+                    <item value="0x00000033">VO_OSMP_STREAMING_DRM_VIDEO_OUTPUT_FORBIDDEN</item>
+                    <item value="0x00000034">VO_OSMP_STREAMING_DRM_INIT_FAIL</item>
+                    <item value="0x00000035">VO_OSMP_STREAMING_DRM_KEY_FAIL</item>
+                    <item value="0x00000036">VO_OSMP_STREAMING_DRM_DECRYPT_FAIL</item>
+                    <item value="0x00000037">VO_OSMP_STREAMING_DRM_UNINIT_FAIL</item>
+                    <item value="0x00000060">VO_OSMP_STREAMING_ERROR_UNKNOWN</item>
+                </ObjParam>
+            </ObjValueList>
+        </Event>
+		<Event>
+			<EventId>0X02000040</EventId>
+			<!-- VO_OSMP_SRC_CB_ADAPTIVE_STREAMING_ERROR -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received adaptive streaming error event, param1 is %s</Description>
+			<Param1>
+				<item value="1">1, playlist parsing failed</item>
+				<item value="2">2, playlist not supported</item>
+				<item value="3">3, stream not supported</item>
+				<item value="4">4, download failed</item>
+				<item value="5">5, DRM error</item>
+				<item value="6">6, license error</item>
+			</Param1>
+		</Event>
+		<Event>
+			<EventId>0X02000050</EventId>
+			<!-- VO_OSMP_SRC_CB_ADAPTIVE_STREAMING_WARNING -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received adaptive streaming warning event, param1 is %s</Description>
+			<Param1>
+				<item value="1">1, chunk download failed</item>
+				<item value="2">2, chunk format not supported</item>
+				<item value="3">3, DRM error, error type:%s, error code:%d</item>
+				<item value="4">4, playlist download failed: RootUrl=%s, NewUrl=%s, Url=%s, Data=%s, DataSize=%d, PlayListType=%s, ErrorType=%s, ErrorCode=%x</item>
+			</Param1>
+            <ObjValueList>
+                <ObjParam value="errorType">
+                    <item value="0x00000000">VO_OSMP_STREAMING_ERROR_NONE</item>
+                    <item value="0x00000001">VO_OSMP_STREAMING_IO_CONNECTION_FAIL</item>
+                    <item value="0x00000002">VO_OSMP_STREAMING_IO_RESPONSE_TOOLARGE</item>
+                    <item value="0x00000003">VO_OSMP_STREAMING_IO_GET_RESPONSE_TIMEOUT</item>
+                    <item value="0x00000004">VO_OSMP_STREAMING_IO_READ_DATA_ERROR</item>
+                    <item value="0x00000005">VO_OSMP_STREAMING_IO_OUT_OF_MEMORY</item>
+                    <item value="0x00000006">VO_OSMP_STREAMING_IO_REDIRECT_BAD_URL</item>
+                    <item value="0x00000007">VO_OSMP_STREAMING_IO_REDIRECT_URL_MISSING</item>
+                    <item value="0x00000008">VO_OSMP_STREAMING_IO_DNS_ERROR</item>
+                    <item value="0x00000009">VO_OSMP_STREAMING_IO_HTTP_ERROR</item>
+                    <item value="0x00000030">VO_OSMP_STREAMING_DRM_NOT_SUPPORTED</item>
+                    <item value="0x00000031">VO_OSMP_STREAMING_DRM_NO_SDK_LICENSE</item>
+                    <item value="0x00000032">VO_OSMP_STREAMING_DRM_HANDLE_NULL_POINTER</item>
+                    <item value="0x00000033">VO_OSMP_STREAMING_DRM_VIDEO_OUTPUT_FORBIDDEN</item>
+                    <item value="0x00000034">VO_OSMP_STREAMING_DRM_INIT_FAIL</item>
+                    <item value="0x00000035">VO_OSMP_STREAMING_DRM_KEY_FAIL</item>
+                    <item value="0x00000036">VO_OSMP_STREAMING_DRM_DECRYPT_FAIL</item>
+                    <item value="0x00000037">VO_OSMP_STREAMING_DRM_UNINIT_FAIL</item>
+                    <item value="0x00000060">VO_OSMP_STREAMING_ERROR_UNKNOWN</item>
+                </ObjParam>
+            </ObjValueList>
+		</Event>
+        <Event>
+            <EventId>0X04000002</EventId>
+            <!-- VO_OSMP_SRC_CB_IO_HTTP_DOWNLOAD_FAIL -->
+            <Enable>1</Enable>
+            <!-- 0:disable; 1:enable  -->
+            <Action>1</Action>
+            <!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+            <AppBehavior>0</AppBehavior>
+            <!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+            <Description>[APP][EVENT]HTTP download failure : payload size is %d</Description>
+        </Event>
+		<Event>
+			<EventId>0X8000000C</EventId>
+			<!-- VO_OSMP_CB_ERROR -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received CB error event</Description>
+		</Event>
+		<Event>
+			<EventId>0X8000001D</EventId>
+			<!-- VO_OSMP_CB_LICENSE_FAIL -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received license failed event</Description>
+		</Event>
+		<Event>
+			<EventId>0X82000003</EventId>
+			<!-- VO_OSMP_SRC_CB_CONNECTION_TIMEOUT -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received connection timeout event</Description>
+		</Event>
+		<Event>
+			<EventId>0X82000004</EventId>
+			<!-- VO_OSMP_SRC_CB_CONNECTION_LOSS -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received connection loss event</Description>
+		</Event>
+		<Event>
+			<EventId>0X82000006</EventId>
+			<!-- VO_OSMP_SRC_CB_CONNECTION_FAIL -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received connection fail event</Description>
+		</Event>
+		<Event>
+			<EventId>0X82000007</EventId>
+			<!-- VO_OSMP_SRC_CB_DOWNLOAD_FAIL -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download failed event</Description>
+		</Event>
+		<Event>
+			<EventId>0X82000008</EventId>
+			<!-- VO_OSMP_SRC_CB_DRM_FAIL -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received DRM failed event,error code is %d</Description>
+			<Param1/>
+		</Event>
+		<Event>
+			<EventId>0X82000009</EventId>
+			<!-- VO_OSMP_SRC_CB_PLAYLIST_PARSE_ERR -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received playlist parse error event</Description>
+		</Event>
+		<Event>
+			<EventId>0X8200000A</EventId>
+			<!-- VO_OSMP_SRC_CB_CONNECTION_REJECTED -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received connection rejected event</Description>
+		</Event>
+		<Event>
+			<EventId>0X8200000D</EventId>
+			<!-- VO_OSMP_SRC_CB_DRM_AV_OUT_FAIL -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received DRM AV out failed event</Description>
+		</Event>
+		<Event>
+			<EventId>0X03000003</EventId>
+			<!-- VO_OSMP_AD_CB_CONTENT_START -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received AD content start event</Description>
+		</Event>
+		<Event>
+			<EventId>0X03000004</EventId>
+			<!-- VO_OSMP_AD_CB_CONTENT_END -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received AD content end event</Description>
+		</Event>
+		<Event>
+			<EventId>0X03000005</EventId>
+			<!-- VO_OSMP_AD_CB_AD_START -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received AD start event, param1 is %d</Description>
+			<Param1/>
+		</Event>
+		<Event>
+			<EventId>0X03000006</EventId>
+			<!-- VO_OSMP_AD_CB_AD_END -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received AD end event, param1 is %d</Description>
+            <Param1/>
+		</Event>
+		<Event>
+			<EventId>0X03000007</EventId>
+			<!-- VO_OSMP_AD_CB_VIDEO_PROGRESS -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received AD video progress event, param1 is %d</Description>
+            <Param1/>
+		</Event>
+		<Event>
+			<EventId>0X03000008</EventId>
+			<!-- VO_OSMP_AD_CB_VIDEO_DONE -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received AD video done event</Description>
+		</Event>
+		<Event>
+			<EventId>0X03000009</EventId>
+			<!-- VO_OSMP_AD_CB_STATE_CHANGE -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received AD state change event, param1 is %s</Description>
+			<Param1>
+				<item value="-1">-1,ad status is unstarted</item>
+				<item value="0">0, ad status is stopped</item>
+				<item value="1">1, ad status is playing</item>
+				<item value="2">2, ad status is paused</item>
+				<item value="3">3, ad status is buffering</item>
+				<item value="100">100, ad status is domain blacklisted</item>
+				<item value="110">110, video unavailable</item>
+				<item value="130">130, content video loading fail</item>
+				<item value="140">140, ad loading fail</item>
+			</Param1>
+		</Event>
+		<Event>
+			<EventId>0X0300000A</EventId>
+			<!-- VO_OSMP_AD_CB_PLAYBACKINFO -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received AD playback info event</Description>
+		</Event>
+		<Event>
+			<EventId>0X8300000C</EventId>
+			<!-- VO_OSMP_AD_CB_AD_LOAD_ERROR -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received AD load error event</Description>
+		</Event>
+		<Event>
+			<EventId>0X8300000D</EventId>
+			<!-- VO_OSMP_AD_CB_VIDEO_NOT_AVAILABLE -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received AD video not available event</Description>
+		</Event>
+		<Event>
+			<EventId>0X8300000E</EventId>
+			<!-- VO_OSMP_AD_CB_DATA_LOAD_ERROR -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received AD data load error event</Description>
+		</Event>
+		<Event>
+			<EventId>0X8300000F</EventId>
+			<!-- VO_OSMP_AD_CB_VIDEO_GEO_BLOCKED -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received AD video geo blocked event</Description>
+		</Event>
+		<Event>
+			<EventId>0X83000010</EventId>
+			<!-- VO_OSMP_AD_CB_SKIPPABLE -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received AD skippable event</Description>
+		</Event>
+		<Event>
+			<EventId>0X8000001A</EventId>
+			<!-- VO_OSMP_CB_AUDIO_RENDER_FAIL -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>2</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received Audio render fail event</Description>
+		</Event>
+	</OSMPEvent>
+	<DownloadEvent>
+		<DLEvent>
+			<EventId>0X10000001</EventId>
+			<!-- VO_OSMP_CB_STREAMING_DOWNLOADER_OPEN_COMPLETE -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download open completed event. Manifest content size is %d, Manifest content is %s</Description>
+		</DLEvent>
+		<DLEvent>
+			<EventId>0X10000002</EventId>
+			<!-- VO_OSMP_CB_STREAMING_DOWNLOADER_MANIFEST_OK -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download manifest OK event</Description>
+		</DLEvent>
+		<DLEvent>
+			<EventId>0X10000004</EventId>
+			<!-- VO_OSMP_CB_STREAMING_DOWNLOADER_END -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download end event</Description>
+		</DLEvent>
+		<DLEvent>
+			<EventId>0X10000005</EventId>
+			<!-- VO_OSMP_CB_STREAMING_DOWNLOADER_PROGRAM_INFO_CHANGE -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download program info changed event</Description>
+		</DLEvent>
+		<DLEvent>
+			<EventId>0X10000006</EventId>
+			<!-- VO_OSMP_CB_STREAMING_DOWNLOADER_MANIFEST_UPDATE -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download manifest updated event</Description>
+		</DLEvent>
+		<DLEvent>
+            <EventId>0X10000008</EventId><!-- VO_OSMP_CB_STREAMING_DOWNLOADER_START_DOWNLOADING -->
+            <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+            <Action>1</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+            <AppBehavior>0</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+            <Description>[APP][EVENT]Received download start event, local manifest url is %s</Description>
+        </DLEvent>
+		<DLEvent>
+			<EventId>0X90000001</EventId>
+			<!-- VO_OSMP_CB_STREAMING_DOWNLOADER_DOWNLOAD_MANIFEST_FAIL -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download manifest failed event</Description>
+		</DLEvent>
+		<DLEvent>
+			<EventId>0X90000002</EventId>
+			<!-- VO_OSMP_CB_STREAMING_DOWNLOADER_WRITE_MANIFEST_FAIL -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download write manifest failed event</Description>
+		</DLEvent>
+		<DLEvent>
+			<EventId>0X90000003</EventId>
+			<!-- VO_OSMP_CB_STREAMING_DOWNLOADER_DOWNLOAD_CHUNK_FAIL -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download chunk failed event</Description>
+		</DLEvent>
+		<DLEvent>
+			<EventId>0X90000004</EventId>
+			<!-- VO_OSMP_CB_STREAMING_DOWNLOADER_WRITE_CHUNK_FAIL -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download write chunk failed</Description>
+		</DLEvent>
+		<DLEvent>
+			<EventId>0X90000005</EventId>
+			<!-- VO_OSMP_CB_STREAMING_DOWNLOADER_DISK_FULL -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download disk is full event</Description>
+		</DLEvent>
+		<DLEvent>
+			<EventId>0X90000006</EventId>
+			<!-- VO_OSMP_CB_STREAMING_DOWNLOADER_GENERATE_MANIFEST_FAIL -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download generate manifest fail event</Description>
+		</DLEvent>
+		<DLEvent>
+			<EventId>0X90000007</EventId>
+			<!-- VO_OSMP_CB_STREAMING_DOWNLOADER_LIVE_STREAM_NOT_SUPPORT -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download live stream not supported event</Description>
+		</DLEvent>
+		<DLEvent>
+			<EventId>0X90000008</EventId>
+			<!-- VO_OSMP_CB_STREAMING_DOWNLOADER_LOCAL_STREAM_NOT_SUPPORT -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download local stream not supported event</Description>
+		</DLEvent>
+		<DLEvent>
+			<EventId>0X90000009</EventId>
+			<!-- VO_OSMP_CB_STREAMING_DOWNLOADER_LOCAL_PLAYLIST_INIT_FAIL -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download playlist init fail event</Description>
+		</DLEvent>
+		<DLEvent>
+			<EventId>0X9000000A</EventId>
+			<!-- VO_OSMP_CB_STREAMING_DOWNLOADER_LISENCE_CHECK_FAIL -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download license check fail event</Description>
+		</DLEvent>
+		<DLEvent>
+			<EventId>0X9000000B</EventId>
+			<!-- VO_OSMP_CB_STREAMING_DOWNLOADER_INIT_IO_FAIL -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download init io fail event</Description>
+		</DLEvent>
+		<DLEvent>
+			<EventId>0X9000000C</EventId>
+			<!-- VO_OSMP_CB_STREAMING_DOWNLOADER_SWITCH_STATUS_FAIL -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download switch status fail event</Description>
+		</DLEvent>
+		<DLEvent>
+			<EventId>0X9000000D</EventId>
+			<!-- VO_OSMP_CB_STREAMING_DOWNLOADER_CHECK_STATUS_FAIL -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download check status fail event</Description>
+		</DLEvent>
+		<DLEvent>
+			<EventId>0X90000010</EventId>
+			<!-- VO_OSMP_CB_STREAMING_DOWNLOADER_CREATE_FOLDER_FAIL -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>1</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download fail to create the folder event</Description>
+		</DLEvent>
+		<DLEvent>
+			<EventId>0XCBE00003</EventId>
+			<!-- VO_OSMP_CB_STREAMING_DOWNLOADER_DRM_FAIL -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>3</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>1</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Received download DRM fail event, param1 is %s</Description>
+            <Param1>
+                <item value="48">0x00000030, DRM not supported</item>
+                <item value="49">0x00000031, no sdk license</item>
+                <item value="50">0x00000032, handle null pointer</item>
+                <item value="51">0x00000033, video output forbiden</item>
+                <item value="52">0x00000034, Some errors occurred during drm initialization</item>
+                <item value="53">0x00000035, Some errors occurred during drm-key operation</item>
+                <item value="54">0x00000036, Some errors occurred during content decryption</item>
+                <item value="55">0x00000037, Some error occurred during drm un-initialization</item>
+                <item value="96">0x00000060, un-defined error</item>
+            </Param1>
+		</DLEvent>
+	</DownloadEvent>
+    
+	<AppEvent>
+		<UIEvent>
+			<EventId>0X8A000001</EventId>
+			<!-- APP_CODEC_NOT_SUPPORT -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>2</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Codec not support</Description>
+		</UIEvent>
+		<UIEvent>
+			<EventId>0X8A000002</EventId>
+			<!-- APP_AUDIO_CODEC_NOT_SUPPORT -->
+			<Enable>1</Enable>
+			<!-- 0:disable; 1:enable  -->
+			<Action>2</Action>
+			<!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+			<AppBehavior>0</AppBehavior>
+			<!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+			<Description>[APP][EVENT]Codec not support, audio not supported</Description>
+		</UIEvent>
+	</AppEvent>
+</EventConfig>

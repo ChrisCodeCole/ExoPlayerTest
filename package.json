@@ -1,0 +1,71 @@
+{
+  "_from": "git://github.com/sungjkim34/skitter-video.git",
+  "_id": "skitter-video@2.0.0",
+  "_inBundle": false,
+  "_location": "/skitter-video",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "skitter-video@git://github.com/sungjkim34/skitter-video.git",
+    "name": "skitter-video",
+    "escapedName": "skitter-video",
+    "rawSpec": "git://github.com/sungjkim34/skitter-video.git",
+    "saveSpec": "git://github.com/sungjkim34/skitter-video.git",
+    "fetchSpec": "git://github.com/sungjkim34/skitter-video.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git://github.com/sungjkim34/skitter-video.git#1539174675154dad4aeeb95e977d662892ce6a05",
+  "_spec": "skitter-video@git://github.com/sungjkim34/skitter-video.git",
+  "_where": "/Users/jay/Skitter/rnios",
+  "author": {
+    "name": "Sungjae Kim",
+    "email": "sungjkim34@gmail.com",
+    "url": "https://github.com/sungjkim34"
+  },
+  "bugs": {
+    "url": "https://github.com/sungjkim34/skitter-video/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Isaiah Grey",
+      "email": "isaiahgrey@gmail.com"
+    },
+    {
+      "name": "Johannes Lumpe",
+      "email": "johannes@lum.pe"
+    },
+    {
+      "name": "Baris Sencan",
+      "email": "baris.sncn@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "keymirror": "0.1.1",
+    "prop-types": "^15.5.10"
+  },
+  "deprecated": false,
+  "description": "A <Video /> element for react-native",
+  "devDependencies": {
+    "babel-eslint": "5.0.0-beta8",
+    "eslint": "1.10.3",
+    "eslint-config-airbnb": "4.0.0",
+    "eslint-plugin-react": "3.16.1",
+    "jest-cli": "0.2.1"
+  },
+  "homepage": "https://github.com/sungjkim34/skitter-video#readme",
+  "license": "MIT",
+  "main": "Video.js",
+  "name": "skitter-video",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sungjkim34/skitter-video.git"
+  },
+  "scripts": {
+    "test": "eslint *.js"
+  },
+  "version": "2.0.0"
+}

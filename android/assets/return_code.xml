@@ -1,0 +1,261 @@
+<ReturnCode>
+    <RC>
+        <ErrorCode>0X00000000</ErrorCode><!-- VO_OSMP_ERR_NONE -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>1</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>0</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned success</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X80000001</ErrorCode><!-- VO_OSMP_ERR_EOS -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned reached the end of source</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X80000002</ErrorCode><!-- VO_OSMP_ERR_RETRY -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned buffer was empty, retry</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X80000003</ErrorCode><!-- VO_OSMP_ERR_FORMAT_CHANGE -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned format was changed</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X80000004</ErrorCode><!-- VO_OSMP_ERR_VIDEO -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned video codec error</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X80000005</ErrorCode><!-- VO_OSMP_ERR_AUDIO -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned audio codec error</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X80000006</ErrorCode><!-- VO_OSMP_ERR_OUTMEMORY -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned out of memory</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X80000007</ErrorCode><!-- VO_OSMP_ERR_POINTER -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned the pointer is invalid</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X80000008</ErrorCode><!-- VO_OSMP_ERR_PARAMID -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned the parameter ID is not supported</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X80000009</ErrorCode><!-- VO_OSMP_ERR_STATUS -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned the status is wrong</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X8000000A</ErrorCode><!-- VO_OSMP_ERR_IMPLEMENT -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned the function is not implemented</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X8000000B</ErrorCode><!-- VO_OSMP_ERR_SMALLSIZE -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned the input buffer is too small</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X8000000C</ErrorCode><!-- VO_OSMP_ERR_OUT_OF_TIME -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned out of time</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X8000000D</ErrorCode><!-- VO_OSMP_ERR_WAIT_TIME -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned DRM AV out failed</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X8000000E</ErrorCode><!-- VO_OSMP_ERR_UNKNOWN -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned unknown error</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X8000000F</ErrorCode><!-- VO_OSMP_ERR_JNI -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned JNI error</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X80000011</ErrorCode><!-- VO_OSMP_ERR_LICENSE_FAIL -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned license failed</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X80000012</ErrorCode><!-- VO_OSMP_ERR_HTTPS_CA_FAIL -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned HTTPS certification authority error</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X80000101</ErrorCode><!-- VO_OSMP_ERR_UNINITIALIZE -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned object not initialized</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X81000001</ErrorCode><!-- VO_OSMP_SRC_ERR_OPEN_SRC_FAIL -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned open source failed</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X81000002</ErrorCode><!-- VO_OSMP_SRC_ERR_CONTENT_ENCRYPT -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned content is encrypted</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X81000003</ErrorCode><!-- VO_OSMP_SRC_ERR_PLAYMODE_UNSUPPORT -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned play mode not supported</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X81000004</ErrorCode><!-- VO_OSMP_SRC_ERR_ERROR_DATA -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned source file data error</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X81000005</ErrorCode><!-- VO_OSMP_SRC_ERR_SEEK_FAIL -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned seek failed</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X81000006</ErrorCode><!-- VO_OSMP_SRC_ERR_FORMAT_UNSUPPORT -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned source file format not supported</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X81000007</ErrorCode><!-- VO_OSMP_SRC_ERR_TRACK_NOTFOUND -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned track cannot be found</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X81000008</ErrorCode><!-- VO_OSMP_SRC_ERR_NO_DOWNLOAD_OP -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned no download pointer set</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X81000009</ErrorCode><!-- VO_OSMP_SRC_ERR_NO_LIB_OP -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned no lib function pointer set</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X8100000A</ErrorCode><!-- VO_OSMP_SRC_ERR_OUTPUT_NOTFOUND -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned output type not found</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X8100000B</ErrorCode><!-- VO_OSMP_SRC_ERR_CHUNK_SKIP -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned chunk must be dropped/skipped</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X8100000D</ErrorCode><!-- VO_OSMP_SRC_ERR_DIVXUNSUPPORTED -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned source object not support DIVX</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X8100000E</ErrorCode><!-- VO_OSMP_SRC_ERR_LINK_FAIL -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned link causes failed</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X8100000F</ErrorCode><!-- VO_OSMP_SRC_ERR_DRM_FAIL -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned chunk get drm error</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X81000010</ErrorCode><!-- VO_OSMP_SRC_ERR_PLAYLIST_DOWNLOAD_FAIL -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned failed to download playlist</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X81000011</ErrorCode><!-- VO_OSMP_SRC_ERR_INVALID_PLAYLIST_TYPE -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned cannot recognize the type of playlist</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X81000012</ErrorCode><!-- VO_OSMP_SRC_ERR_MANIFEST_PARSE_FAIL -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned manifest has some errors</Description>
+    </RC>
+    <RC>
+        <ErrorCode>0X80001001</ErrorCode><!-- VO_OSMP_SRC_ERR_SRC_UNINITIALIZE -->
+        <Enable>1</Enable><!-- 0:disable; 1:enable  -->
+        <Action>2</Action><!-- 1:log; 2:popup message; 3:both; 4:param1; 5:param2 -->
+        <AppBehavior>1</AppBehavior><!-- 0:continue; 1:stop 2:pause 3:switch engine  -->
+        <Description>[APP][RC]%s returned source object not initialized</Description>
+    </RC>
+</ReturnCode>
