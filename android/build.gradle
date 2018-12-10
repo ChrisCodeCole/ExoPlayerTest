@@ -23,7 +23,13 @@ android {
 dependencies {
     //noinspection GradleDynamicVersion
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile(name: 'vo-osmpsdk-release', ext:'aar')
+    implementation(name:'amino-rtsplib-timeLimited-0.8.7', ext:'aar')
+    implementation(name:'exoplayer-library-2.4.0-amino.0.1.6', ext:'aar')
+    implementation(name:'exoplayer-library-core-2.4.0-amino.0.1.6', ext:'aar')
+    implementation(name:'exoplayer-library-dash-2.4.0-amino.0.1.6', ext:'aar')
+    implementation(name:'exoplayer-library-hls-2.4.0-amino.0.1.6', ext:'aar')
+    implementation(name:'exoplayer-library-smoothstreaming-2.4.0-amino.0.1.6', ext:'aar')
+    implementation(name:'exoplayer-library-ui-2.4.0-amino.0.1.6', ext:'aar')
     provided 'com.facebook.react:react-native:+'
     compile 'com.yqritc:android-scalablevideoview:1.0.4'
 }

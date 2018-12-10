@@ -30,6 +30,7 @@ import java.io.InputStream;
 
 @SuppressLint("ViewConstructor")
 public class ReactVideoView extends voSurfaceView implements SurfaceHolder.Callback, LifecycleEventListener {
+// public class ReactVideoView {
 
     @Override
     public void onHostResume() {
